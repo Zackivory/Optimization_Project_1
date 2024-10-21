@@ -156,6 +156,7 @@ with open('data/potential_locations.csv', 'r') as file:
         decision_variables_new_facilities[f"{row_number}_small"] = (zipcode, model.addVar(vtype=GRB.BINARY, name=f"location_{row_number}_small"))
         decision_variables_new_facilities[f"{row_number}_medium"] = (zipcode, model.addVar(vtype=GRB.BINARY, name=f"location_{row_number}_medium"))
         decision_variables_new_facilities[f"{row_number}_large"] = (zipcode, model.addVar(vtype=GRB.BINARY, name=f"location_{row_number}_large"))
+        #TODO check
         model.addConstr(decision_variables_new_facilities[f"{row_number}_small"][1] + decision_variables_new_facilities[f"{row_number}_medium"][1] + decision_variables_new_facilities[f"{row_number}_large"][1] <= 1, name=f"at_most_one_facility_at_{row_number}")
 new_facilities_end_time = time.time()
 print(f"New facilities decision variables creation time: {new_facilities_end_time - new_facilities_start_time:.2f} seconds")
