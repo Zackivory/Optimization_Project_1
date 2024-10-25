@@ -18,7 +18,7 @@ $`b_{facility\_id}, \quad \forall \text{facility\_id} \in F`$
 
 $`0 \leq x_{\text{facility\_id}} \leq 120, \quad \forall \text{facility\_id} \in F`$
 
-$`F \text{ is the set of all facility id in child_care\_regulated.csv }`$
+$`F \text{ is the set of all facility id in child\_care\_regulated.csv }`$
 
 
 
