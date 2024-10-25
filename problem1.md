@@ -6,19 +6,19 @@ $` b_{r, \text{medium}}, \quad \forall r \in R`$
 
 $` b_{r, \text{large}} , \quad \forall r \in R`$
 
-$`R \in\{2,3,\dots ,215401\} \text{ is the set contain all row number of potential_locations.csv exculde row 1 which is the heading}`$
+$`R \in\{2,3,\dots ,215401\} \text{ is the set contain all row number of potential\_locations.csv exculde row 1 which is the heading}`$
 
 save all decision variable for new facility in a dictionary called
 decision_variables_new_facilities
 
 the sum of three binary decision variable for each row is less equal to 1,
 
-$`b_{facility\_id}, \quad \forall \text{facility_id} \in F`$
+$`b_{facility\_id}, \quad \forall \text{facility\_id} \in F`$
 # continious decision variable for expansion
 
-$`0 \leq x_{\text{facility_id}} \leq 120, \quad \forall \text{facility_id} \in F`$
+$`0 \leq x_{\text{facility\_id}} \leq 120, \quad \forall \text{facility\_id} \in F`$
 
-$`F \text{ is the set of all facility id in child_care_regulated.csv }`$
+$`F \text{ is the set of all facility id in child_care\_regulated.csv }`$
 
 
 
@@ -36,7 +36,7 @@ $`\delta_z^{0-5} \quad \text{Required increase in 0-5(years old)capacity for zip
 
 $`R_z \text{ contain all row number that belong to zip code z}`$
 
-$`F_z \text{ contain all facility_id that the coresbonding facility is within zip code z}`$
+$`F_z \text{ contain all facility\_id that the coresbonding facility is within zip code z}`$
 
 $`C_{facility\_id} \text{ original total capacity of the facility with given id}`$
 
