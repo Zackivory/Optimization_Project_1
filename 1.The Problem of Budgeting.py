@@ -7,6 +7,7 @@ import time
 import sys
 import os
 import folium
+
 """
 in high-demand areas—defined as regions where at least 60% of parents are employed or the average income is $60,000 or less per year—an area is considered a child care desert
 if the number of available slots is less than or equal to half the population of children aged two
@@ -26,8 +27,7 @@ to care. This means that the number of available slots for children in this age 
 least two-thirds of the population of children aged 0-5.
 """
 
-
-#TODO find child care deserts
+# TODO find child care deserts
 
 
 # Start timing
@@ -93,18 +93,25 @@ with open('data/child_care_regulated.csv', 'r', encoding="UTF-8") as file:
         school_age_capacity = int(row[10]) if row[10] else 0
         children_capacity = int(row[11]) if row[11] else 0
         total_capacity = int(row[12]) if row[12] else 0
-        #TODO:check the age range for each type
+        # TODO:check the age range for each type
         if zipcode in child_care_capacity_data:
             child_care_capacity_data[zipcode] += total_capacity
         else:
             child_care_capacity_data[zipcode] = total_capacity
-        
+
         # Calculate 0-5 capacity
         capacity_0_5 = infant_capacity + toddler_capacity
         if zipcode in care_0_5_capacity_data:
             care_0_5_capacity_data[zipcode] += capacity_0_5
         else:
             care_0_5_capacity_data[zipcode] = capacity_0_5
+# Export child_care_capacity_data into temp
+with open('temp/child_care_capacity_data.json', 'w', encoding="UTF-8") as file:
+    json.dump(child_care_capacity_data, file, ensure_ascii=False, indent=4)
+# Export care_0_5_capacity_data into temp
+with open('temp/care_0_5_capacity_data.json', 'w', encoding="UTF-8") as file:
+    json.dump(care_0_5_capacity_data, file, ensure_ascii=False, indent=4)
+
 capacity_end_time = time.time()
 print(f"Child care capacity data loading time: {capacity_end_time - capacity_start_time:.2f} seconds")
 
@@ -124,7 +131,7 @@ for zipcode, data in population_data.items():
 
     threshold_0_5 = data["children_0_5_population"] * (2 / 3)
     if child_care_capacity <= threshold or child_care_capacity <= threshold_0_5:
-        
+
         child_care_deserts_info = {
             "is_high_demand": high_demand,
             "children_population": data["children_population"],
@@ -153,13 +160,20 @@ with open('data/potential_locations.csv', 'r') as file:
         zipcode = row[0]
         latitude = float(row[1])
         longitude = float(row[2])
-        decision_variables_new_facilities[f"{row_number}_small"] = (zipcode, model.addVar(vtype=GRB.BINARY, name=f"location_{row_number}_small"))
-        decision_variables_new_facilities[f"{row_number}_medium"] = (zipcode, model.addVar(vtype=GRB.BINARY, name=f"location_{row_number}_medium"))
-        decision_variables_new_facilities[f"{row_number}_large"] = (zipcode, model.addVar(vtype=GRB.BINARY, name=f"location_{row_number}_large"))
-        #TODO check
-        model.addConstr(decision_variables_new_facilities[f"{row_number}_small"][1] + decision_variables_new_facilities[f"{row_number}_medium"][1] + decision_variables_new_facilities[f"{row_number}_large"][1] <= 1, name=f"at_most_one_facility_at_{row_number}")
+        decision_variables_new_facilities[f"{row_number}_small"] = (
+        zipcode, model.addVar(vtype=GRB.BINARY, name=f"location_{row_number}_small"))
+        decision_variables_new_facilities[f"{row_number}_medium"] = (
+        zipcode, model.addVar(vtype=GRB.BINARY, name=f"location_{row_number}_medium"))
+        decision_variables_new_facilities[f"{row_number}_large"] = (
+        zipcode, model.addVar(vtype=GRB.BINARY, name=f"location_{row_number}_large"))
+        # TODO check
+        model.addConstr(decision_variables_new_facilities[f"{row_number}_small"][1] +
+                        decision_variables_new_facilities[f"{row_number}_medium"][1] +
+                        decision_variables_new_facilities[f"{row_number}_large"][1] <= 1,
+                        name=f"at_most_one_facility_at_{row_number}")
 new_facilities_end_time = time.time()
-print(f"New facilities decision variables creation time: {new_facilities_end_time - new_facilities_start_time:.2f} seconds")
+print(
+    f"New facilities decision variables creation time: {new_facilities_end_time - new_facilities_start_time:.2f} seconds")
 
 # Create decision variables for each facility for expansion
 expansion_start_time = time.time()
@@ -170,7 +184,7 @@ with open('data/child_care_regulated.csv', 'r', encoding="UTF-8") as file:
     for row in reader:
         facility_id = row[0]
         zipcode = row[5]
-        
+
         original_infant_capacity = int(row[7]) if row[7] else 0
         original_toddler_capacity = int(row[8]) if row[8] else 0
         original_preschool_capacity = int(row[9]) if row[9] else 0
@@ -180,12 +194,15 @@ with open('data/child_care_regulated.csv', 'r', encoding="UTF-8") as file:
         latitude = float(row[13]) if row[13] else 0.0
         longitude = float(row[14]) if row[14] else 0.0
         original_0_5_capacity = original_infant_capacity + original_toddler_capacity
-        
-        decision_variables_expansion[facility_id] = ([zipcode, original_0_5_capacity, original_total_capacity, latitude, longitude], model.addVar(vtype=GRB.CONTINUOUS, name=f"expansion_percentage_{facility_id}", lb=0, ub=120))
-         
+
+        decision_variables_expansion[facility_id] = (
+        [zipcode, original_0_5_capacity, original_total_capacity, latitude, longitude],
+        model.addVar(vtype=GRB.CONTINUOUS, name=f"expansion_percentage_{facility_id}", lb=0, ub=120))
+
         # Add constraints for expansion
         if original_total_capacity <= 500:
-            model.addConstr((original_total_capacity * (decision_variables_expansion[facility_id][1] / 100)) <= 500, name=f"max_capacity_{facility_id}")
+            model.addConstr((original_total_capacity * (decision_variables_expansion[facility_id][1] / 100)) <= 500,
+                            name=f"max_capacity_{facility_id}")
 expansion_end_time = time.time()
 print(f"Expansion decision variables creation time: {expansion_end_time - expansion_start_time:.2f} seconds")
 
@@ -223,7 +240,7 @@ for child_care_desert_zipcode, child_care_desert_info in child_care_deserts.item
     sum_of_increase_0_5_capacity = 0
 
     for facility_id, (info_list, var) in decision_variables_expansion.items():
-        zipcode, original_0_5_capacity,original_total_capacity, _, _ = info_list
+        zipcode, original_0_5_capacity, original_total_capacity, _, _ = info_list
 
         if zipcode == child_care_desert_zipcode:
             sum_of_increase_child_care_capacity += var * original_total_capacity
@@ -243,8 +260,10 @@ for child_care_desert_zipcode, child_care_desert_info in child_care_deserts.item
                 sum_of_increase_child_care_capacity += new_facility_info["large"]["total_slots"] * var
                 sum_of_increase_0_5_capacity += new_facility_info["large"]["slots_0_5"] * var
 
-    model.addConstr(sum_of_increase_child_care_capacity >= child_care_desert_info["difference_child_care_capacity"], name=f"increase_child_care_capacity_{child_care_desert_zipcode}")
-    model.addConstr(sum_of_increase_0_5_capacity >= child_care_desert_info["difference_0_5_capacity"], name=f"increase_0_5_capacity_{child_care_desert_zipcode}")
+    model.addConstr(sum_of_increase_child_care_capacity >= child_care_desert_info["difference_child_care_capacity"],
+                    name=f"increase_child_care_capacity_{child_care_desert_zipcode}")
+    model.addConstr(sum_of_increase_0_5_capacity >= child_care_desert_info["difference_0_5_capacity"],
+                    name=f"increase_0_5_capacity_{child_care_desert_zipcode}")
 
     current_desert += 1
     print(current_desert)
@@ -254,13 +273,15 @@ print("Finished adding constraints.")
 constraints_end_time = time.time()
 print(f"Constraints addition time: {constraints_end_time - constraints_start_time:.2f} seconds")
 
-
 # Set the objective function
 objective_start_time = time.time()
 model.setObjective(
-    gp.quicksum(new_facility_info["small"]["cost"] * var for rowNumber_type, (zipcode, var) in decision_variables_new_facilities.items() if rowNumber_type.endswith("_small")) +
-    gp.quicksum(new_facility_info["medium"]["cost"] * var for rowNumber_type, (zipcode, var) in decision_variables_new_facilities.items() if rowNumber_type.endswith("_medium")) +
-    gp.quicksum(new_facility_info["large"]["cost"] * var for rowNumber_type, (zipcode, var) in decision_variables_new_facilities.items() if rowNumber_type.endswith("_large")) +
+    gp.quicksum(new_facility_info["small"]["cost"] * var for rowNumber_type, (zipcode, var) in
+                decision_variables_new_facilities.items() if rowNumber_type.endswith("_small")) +
+    gp.quicksum(new_facility_info["medium"]["cost"] * var for rowNumber_type, (zipcode, var) in
+                decision_variables_new_facilities.items() if rowNumber_type.endswith("_medium")) +
+    gp.quicksum(new_facility_info["large"]["cost"] * var for rowNumber_type, (zipcode, var) in
+                decision_variables_new_facilities.items() if rowNumber_type.endswith("_large")) +
     gp.quicksum(expansion_costs[facility_id] for facility_id in decision_variables_expansion),
     GRB.MINIMIZE
 )
@@ -284,8 +305,6 @@ if __name__ == '__main__':
         print(f'Optimal Objective Value: {model.objVal}')
     else:
         print("No optimal solution found")
-
-
 
     # End timing
     overall_end_time = time.time()
