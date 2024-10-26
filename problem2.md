@@ -97,7 +97,7 @@ $`\forall z, \forall r_i, r_j \in R_z, \text{if } \text{distance}(r_i, r_j) < 0.
 # objective
 $`C_1= \sum_{r \in R}b_{r, \text{small}}\times 65,000 + b_{r, \text{medium}} \times 95,000 + b_{r, \text{large}}\times 115,000`$
 
-$`C_2=\sum_{f \in F}(2000+200\times C_{facility\_id})\times b_{facility\_id}`$
+$`C_2=\sum_{f \in F}\left(20000 + 200 \times C_{facility\_id} \times x_{\text{level 1, facility\_id}} + 400 \times C_{facility\_id} \times x_{\text{level 2, facility\_id}} + 1000 \times C_{facility\_id} \times x_{\text{level 3, facility\_id}}\right)`$
 
 $`\min C_1+C_2 `$
 ``` python
