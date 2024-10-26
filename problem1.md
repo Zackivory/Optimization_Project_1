@@ -1,3 +1,4 @@
+ problem 1
 # binary decision variable for new facility
 
 $` b_{r, \text{small}}, \quad \forall r \in R`$
@@ -82,7 +83,7 @@ for child_care_desert_zipcode, child_care_desert_info in child_care_deserts.item
 # objective
 $`C_1= \sum_{r \in R}b_{r, \text{small}}\times 65,000 + b_{r, \text{medium}} \times 95,000 + b_{r, \text{large}}\times 115,000`$
 
-$`C_2=\sum_{f \in F}(2000+200\times C_{facility\_id})\times b_{facility\_id}`$
+$`C_2=\sum_{f \in F}(20000+200\times C_{facility\_id})\times b_{facility\_id}`$
 
 $`\min C_1+C_2 `$
 ``` python
