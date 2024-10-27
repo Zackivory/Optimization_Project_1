@@ -44,10 +44,10 @@ $`C_{facility\_id} \text{ original total capacity of the facility with given id}
 $`C^{0-5}_{facility\_id} \text{ original 0-5 years old care capacity of the facility with given id}`$
 
 ### child care capacity 
-$`\sum_{f \in F_z} x_f \cdot C_{facility\_id} + \sum_{r \in R_z} (b_{r, \text{small}}\times 100 + b_{r, \text{medium}} \times 200 + b_{r, \text{large}}\times 400) \geq \delta_z \quad \forall z`$
+$`\sum_{f \in F_z} x_{\text{facility\_id}} \cdot C_{facility\_id} + \sum_{r \in R_z} (b_{r, \text{small}}\times 100 + b_{r, \text{medium}} \times 200 + b_{r, \text{large}}\times 400) \geq \delta_z \quad \forall z`$
 
 ### 0-5 years old care capacity
-$`\sum_{f \in F_z} x_f \cdot C^{0-5}_{facility\_id} + \sum_{r \in R_z} (b_{r, \text{small}}\times 50 + b_{r, \text{medium}} \times 100 + b_{r, \text{large}}\times 200) \geq \delta_z^{0-5} \quad \forall z`$
+$`\sum_{f \in F_z} x_{\text{facility\_id}} \cdot C^{0-5}_{facility\_id} + \sum_{r \in R_z} (b_{r, \text{small}}\times 50 + b_{r, \text{medium}} \times 100 + b_{r, \text{large}}\times 200) \geq \delta_z^{0-5} \quad \forall z`$
 
 
 
