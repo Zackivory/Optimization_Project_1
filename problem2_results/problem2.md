@@ -18,7 +18,7 @@ It indicates for the given facility_id we should expand or not
 
 $`b_{facility\_id}, \quad \forall \text{facility\_id} \in F`$
 # continious decision variable for expansion
-### fixed on Oct. 27 7pm: uperbond fix from 120 to 0.2 
+
 $`0 \leq x_{\text{facility\_id}} \leq 0.2, \quad \forall \text{facility\_id} \in F`$
 
 $`F \text{ is the set of all facility id in child\_care\_regulated.csv }`$
