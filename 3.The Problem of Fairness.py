@@ -91,16 +91,17 @@ filtered_social_coverage_ratios = {zipcode: ratio for zipcode, ratio in social_c
 
 # Check if any zip code in child_care_deserts.json was not in filtered zip
 missing_zipcodes = [zipcode for zipcode in child_care_deserts if zipcode not in filtered_social_coverage_ratios]
-
 if missing_zipcodes:
     print(f"Zip codes in child_care_deserts.json not found in filtered zip codes: {missing_zipcodes}")
 else:
     print("All zip codes in child_care_deserts.json are present in the filtered zip codes.")
 
 
+
 print("Starting to add constraints to satisfy the increase of child care capacity and 0-5 capacity...")
 total_deserts = len(child_care_deserts)
 current_desert = 0
+social_coverage_indices=[]
 for child_care_desert_zipcode, child_care_desert_info in child_care_deserts.items():
     sum_of_increase_child_care_capacity = 0
     sum_of_increase_0_5_capacity = 0
@@ -133,19 +134,73 @@ for child_care_desert_zipcode, child_care_desert_info in child_care_deserts.item
     # problem3: specific
     new_child_care_capacity = original_total_capacity + sum_of_increase_child_care_capacity
     new_0_5_capacity = original_0_5_capacity + sum_of_increase_0_5_capacity
-    all_child_social_coverage_ratio=new_child_care_capacity/child_care_desert_info["children_population"]
-    model.addConstr(all_child_social_coverage_ratio>=0.9,name="social_coverage_ratio_lower_bound")
-    model.addConstr(all_child_social_coverage_ratio<=1,name="social_coverage_ratio_upper_bound")
-    all_0_5_social_coverage_ratio=new_0_5_capacity/child_care_desert_info["children_0_5_population"]
-    #calculate 
+    if child_care_desert_info["children_population"] != 0:
+        all_child_social_coverage_ratio = new_child_care_capacity / child_care_desert_info["children_population"]
+        model.addConstr(all_child_social_coverage_ratio>=0.9,name="social_coverage_ratio_lower_bound")
+        model.addConstr(all_child_social_coverage_ratio<=1,name="social_coverage_ratio_upper_bound")
+    else:
+        all_child_social_coverage_ratio = 0
     
-    
+    if child_care_desert_info["children_0_5_population"] != 0:
+        all_0_5_social_coverage_ratio = new_0_5_capacity / child_care_desert_info["children_0_5_population"]
+    else:
+        all_0_5_social_coverage_ratio = 0
+    #calculate social coverage index
+    social_coverage_index = (2 * all_0_5_social_coverage_ratio + all_child_social_coverage_ratio) / 3
+    social_coverage_indices.append(social_coverage_index)
     
     current_desert += 1
     print(current_desert)
 
-print("Finished adding constraints.")
+# for zipcodes not in child_care_deserts, we need to add constraints to ensure the social coverage ratio is between 0.9 and 1
 
+zipcodes_not_in_child_care_deserts = {zipcode: info for zipcode, info in population_data.items() if zipcode not in child_care_deserts}
+for zipcode, population_info in zipcodes_not_in_child_care_deserts.items():
+    sum_of_increase_child_care_capacity = 0
+    sum_of_increase_0_5_capacity = 0
+
+    for facility_id, (info_list, var) in decision_variables_expansion.items():
+        facility_zipcode, original_0_5_capacity, original_total_capacity, _, _ = info_list
+
+        if facility_zipcode == zipcode:
+            sum_of_increase_child_care_capacity += var * original_total_capacity
+            sum_of_increase_0_5_capacity += var * original_0_5_capacity
+
+    for rowNumber_type, (facility_zipcode, var) in decision_variables_new_facilities.items():
+        facility_type = rowNumber_type.split('_')[-1]
+
+        if facility_zipcode == zipcode:
+            if facility_type == "small":
+                sum_of_increase_child_care_capacity += new_facility_info["small"]["total_slots"] * var
+                sum_of_increase_0_5_capacity += new_facility_info["small"]["slots_0_5"] * var
+            elif facility_type == "medium":
+                sum_of_increase_child_care_capacity += new_facility_info["medium"]["total_slots"] * var
+                sum_of_increase_0_5_capacity += new_facility_info["medium"]["slots_0_5"] * var
+            elif facility_type == "large":
+                sum_of_increase_child_care_capacity += new_facility_info["large"]["total_slots"] * var
+                sum_of_increase_0_5_capacity += new_facility_info["large"]["slots_0_5"] * var
+
+    new_child_care_capacity = original_total_capacity + sum_of_increase_child_care_capacity
+    new_0_5_capacity = original_0_5_capacity + sum_of_increase_0_5_capacity
+    if population_info["children_population"] != 0:
+        all_child_social_coverage_ratio = new_child_care_capacity / population_info["children_population"]
+        model.addConstr(all_child_social_coverage_ratio >= 0.9, name=f"social_coverage_ratio_lower_bound_{zipcode}")
+        model.addConstr(all_child_social_coverage_ratio <= 1, name=f"social_coverage_ratio_upper_bound_{zipcode}")
+    else:
+        all_child_social_coverage_ratio = 0
+    
+    if population_info["children_0_5_population"] != 0:
+        all_0_5_social_coverage_ratio = new_0_5_capacity / population_info["children_0_5_population"]
+        model.addConstr(all_0_5_social_coverage_ratio >= 0.9, name=f"social_coverage_ratio_0_5_lower_bound_{zipcode}")
+        model.addConstr(all_0_5_social_coverage_ratio <= 1, name=f"social_coverage_ratio_0_5_upper_bound_{zipcode}")
+    else:
+        all_0_5_social_coverage_ratio = 0
+    #calculate social coverage index
+    social_coverage_index = (2 * all_0_5_social_coverage_ratio + all_child_social_coverage_ratio) / 3
+    social_coverage_indices.append(social_coverage_index)
+
+# Step 4: Define the objective function to maximize the sum of social coverage indices
+model.setObjective(gp.quicksum(social_coverage_indices), GRB.MAXIMIZE)
 
 
 # Step 5: Distance constraint - Ensure no two facilities are within 0.06 miles of each other
@@ -211,18 +266,6 @@ for i in range(len(locations)):
                     decision_variables_new_facilities[f"{row_number_j}_large"][1] <= 1,
                     name=f"distance_constraint_{row_number_i}_{row_number_j}"
                 )
-
-model.setObjective(
-    gp.quicksum(new_facility_info["small"]["cost"] * var for rowNumber_type, (zipcode, var) in
-                decision_variables_new_facilities.items() if rowNumber_type.endswith("_small")) +
-    gp.quicksum(new_facility_info["medium"]["cost"] * var for rowNumber_type, (zipcode, var) in
-                decision_variables_new_facilities.items() if rowNumber_type.endswith("_medium")) +
-    gp.quicksum(new_facility_info["large"]["cost"] * var for rowNumber_type, (zipcode, var) in
-                decision_variables_new_facilities.items() if rowNumber_type.endswith("_large")) +
-    gp.quicksum(expansion_cost[facility_id] for facility_id in decision_variables_expansion),
-    GRB.MINIMIZE
-)
-
 
 
 

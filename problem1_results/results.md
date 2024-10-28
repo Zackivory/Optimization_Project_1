@@ -1,3 +1,4 @@
+```text
 Gurobi Optimizer version 11.0.3 build v11.0.3rc0 (win64 - Windows 11.0 (22631.2))
 
 CPU model: 11th Gen Intel(R) Core(TM) i7-11800H @ 2.30GHz, instruction set [SSE2|AVX|AVX2|AVX512]
@@ -28,3 +29,4 @@ Solution count 3: 8.47868e+08 8.47943e+08 9.91738e+08
 Optimal solution found (tolerance 1.00e-04)
 Best objective 8.478680000000e+08, best bound 8.478680000000e+08, gap 0.0000%
 Optimal Objective Value: 847868000.0
+```
