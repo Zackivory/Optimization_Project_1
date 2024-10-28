@@ -1,12 +1,10 @@
 import json
-
 import gurobipy as gp
 from gurobipy import GRB
 import math
-import json
+from util import create_decision_variables_for_expansion, create_decision_variables_for_new_facilities, \
+    new_facility_info
 
-# Start building the optimization model
-model = gp.Model("Child_Care_Desert_Expansion_and_Distance")
 # Load the data
 with open('temp/child_care_deserts.json', 'r') as file:
     child_care_deserts = json.load(file)
@@ -14,85 +12,21 @@ with open('temp/child_care_capacity_data.json', 'r') as file:
     child_care_capacity_data = json.load(file)
 with open('temp/care_0_5_capacity_data.json', 'r') as file:
     care_0_5_capacity_data = json.load(file)
-import csv
+with open('temp/location_that_in_child_care_deserts.json', 'r') as file:
+    location_that_in_child_care_deserts = json.load(file)
 
-location_data = {}
-with open('data/potential_locations.csv', 'r') as file:
-    reader = csv.DictReader(file)
-    for row_number, row in enumerate(reader, start=1):
-        zipcode = row['zipcode']
-        latitude = float(row['latitude'])
-        longitude = float(row['longitude'])
-        location_data[row_number] = {'latitude': latitude, 'longitude': longitude, 'zipcode': zipcode}
-# Filter locations that are in child care deserts
-location_that_in_child_care_deserts = {
-    row_number: {'zipcode': lat_lon['zipcode'], 'latitude': lat_lon['latitude'], 'longitude': lat_lon['longitude']}
-    for row_number, lat_lon in location_data.items()
-    if lat_lon['zipcode'] in child_care_deserts
-}
-# Save the filtered locations to a new JSON file
-with open('temp/location_that_in_child_care_deserts.json', 'w') as f:
-    json.dump(location_that_in_child_care_deserts, f, indent=4)
+
+
 decision_variables_expansion = {}
-with open('data/child_care_regulated.csv', 'r', encoding="UTF-8") as file:
-    reader = csv.reader(file)
-    next(reader)  # Skip header
-    for row in reader:
-        facility_id = row[0]
-        zipcode = row[5]
-
-        original_infant_capacity = int(row[7]) if row[7] else 0
-        original_toddler_capacity = int(row[8]) if row[8] else 0
-        original_preschool_capacity = int(row[9]) if row[9] else 0
-        original_school_age_capacity = int(row[10]) if row[10] else 0
-        original_children_capacity = int(row[11]) if row[11] else 0
-        original_total_capacity = int(row[12]) if row[12] else 0  # total_capacity
-        latitude = float(row[13]) if row[13] else 0.0
-        longitude = float(row[14]) if row[14] else 0.0
-        original_0_5_capacity = original_infant_capacity + original_toddler_capacity
-
-        decision_variables_expansion[facility_id] = (
-        [zipcode, original_0_5_capacity, original_total_capacity, latitude, longitude],
-        model.addVar(vtype=GRB.CONTINUOUS, name=f"expansion_percentage_{facility_id}", lb=0, ub=120))
-
-        # Add constraints for expansion
-        if original_total_capacity <= 500:
-            model.addConstr((original_total_capacity * (decision_variables_expansion[facility_id][1] / 100)) <= 500,
-                            name=f"max_capacity_{facility_id}")
-
-# THE NEW FACILITY IS SELECTED FROM POTENTIAL_LOCATIONS.CSV NOT CHILD_CARE_DESERTS ZIP CODES
-# Decision variables for new facilities (small, medium, large) in each zip code
-#new_facilities = {}
-# for zip_code in child_care_deserts:
-#     new_facilities[f"{zip_code}_small"] = model.addVar(vtype=GRB.BINARY, name=f"new_small_{zip_code}")
-#     new_facilities[f"{zip_code}_medium"] = model.addVar(vtype=GRB.BINARY, name=f"new_medium_{zip_code}")
-#     new_facilities[f"{zip_code}_large"] = model.addVar(vtype=GRB.BINARY, name=f"new_large_{zip_code}")
 decision_variables_new_facilities = {}
-with open('data/potential_locations.csv', 'r') as file:
-    reader = csv.reader(file)
-    next(reader)  # Skip header
-    for row_number, row in enumerate(reader, start=1):
-        zipcode = row[0]
-        latitude = float(row[1])
-        longitude = float(row[2])
-        decision_variables_new_facilities[f"{row_number}_small"] = (
-        zipcode, model.addVar(vtype=GRB.BINARY, name=f"location_{row_number}_small"))
-        decision_variables_new_facilities[f"{row_number}_medium"] = (
-        zipcode, model.addVar(vtype=GRB.BINARY, name=f"location_{row_number}_medium"))
-        decision_variables_new_facilities[f"{row_number}_large"] = (
-        zipcode, model.addVar(vtype=GRB.BINARY, name=f"location_{row_number}_large"))
-        # TODO check
-        model.addConstr(decision_variables_new_facilities[f"{row_number}_small"][1] +
-                        decision_variables_new_facilities[f"{row_number}_medium"][1] +
-                        decision_variables_new_facilities[f"{row_number}_large"][1] <= 1,
-                        name=f"at_most_one_facility_at_{row_number}")
-# Step 2: Define decision variables for expansion and auxiliary variables for piecewise cost
-expansions = {}
-piecewise_expansion = {}
-for facility_id, info in decision_variables_expansion.items():
-    expansions[facility_id] = model.addVar(vtype=GRB.CONTINUOUS, name=f"expansion_{facility_id}", lb=0,
-                                           ub=0.2)  # Max 20% expansion
+model = gp.Model("Child_Care_Desert_Expansion_and_Distance")
+create_decision_variables_for_new_facilities(model, decision_variables_new_facilities)
+create_decision_variables_for_expansion(model, decision_variables_expansion)
 
+
+# Step 2: Define decision variables for expansion and auxiliary variables for piecewise cost
+piecewise_expansion = {}
+for facility_id, (info_list, var) in decision_variables_expansion.items():
     # Define auxiliary variables for the three expansion ranges
     piecewise_expansion[facility_id] = {
         'x1': model.addVar(vtype=GRB.CONTINUOUS, name=f"expansion_x1_{facility_id}", lb=0, ub=0.1),  # 0-10%
@@ -101,7 +35,7 @@ for facility_id, info in decision_variables_expansion.items():
     }
 
     # Ensure that the total expansion is the sum of expansions in each piece
-    model.addConstr(expansions[facility_id] == piecewise_expansion[facility_id]['x1'] +
+    model.addConstr(var == piecewise_expansion[facility_id]['x1'] +
                     piecewise_expansion[facility_id]['x2'] +
                     piecewise_expansion[facility_id]['x3'], name=f"expansion_split_{facility_id}")
 
@@ -118,54 +52,7 @@ for facility_id, (details, var) in decision_variables_expansion.items():
     # Total cost for expansion
     expansion_cost[facility_id] = cost_x1 + cost_x2 + cost_x3
 
-# Objective: Minimize the total cost of building new facilities and expanding existing ones
-# total_cost = gp.quicksum(
-#     65000 * new_facilities[f"{zip_code}_small"] +
-#     95000 * new_facilities[f"{zip_code}_medium"] +
-#     115000 * new_facilities[f"{zip_code}_large"]
-#     for zip_code in child_care_deserts
-# )
 
-# Add the cost of expansion based on the piecewise linear cost
-# total_cost += gp.quicksum(expansion_cost[facility_id] for facility_id in expansion_cost)
-#
-# model.setObjective(total_cost, GRB.MINIMIZE)
-new_facility_info = {
-    "small": {"total_slots": 100, "slots_0_5": 50, "cost": 65000},
-    "medium": {"total_slots": 200, "slots_0_5": 100, "cost": 95000},
-    "large": {"total_slots": 400, "slots_0_5": 200, "cost": 115000}
-}
-model.setObjective(
-    gp.quicksum(new_facility_info["small"]["cost"] * var for rowNumber_type, (zipcode, var) in
-                decision_variables_new_facilities.items() if rowNumber_type.endswith("_small")) +
-    gp.quicksum(new_facility_info["medium"]["cost"] * var for rowNumber_type, (zipcode, var) in
-                decision_variables_new_facilities.items() if rowNumber_type.endswith("_medium")) +
-    gp.quicksum(new_facility_info["large"]["cost"] * var for rowNumber_type, (zipcode, var) in
-                decision_variables_new_facilities.items() if rowNumber_type.endswith("_large")) +
-    gp.quicksum(expansion_cost[facility_id] for facility_id in decision_variables_expansion),
-    GRB.MINIMIZE
-)
-
-
-# # Add constraints to ensure enough slots are added to meet demand
-# for zip_code, desert_info in child_care_deserts.items():
-#     required_capacity = desert_info["difference_child_care_capacity"]
-#     required_0_5_capacity = desert_info["difference_0_5_capacity"]
-#
-#     # Total new slots added (small, medium, large facilities)
-#     total_new_capacity = (100 * new_facilities[f"{zip_code}_small"] +
-#                           200 * new_facilities[f"{zip_code}_medium"] +
-#                           400 * new_facilities[f"{zip_code}_large"])
-#
-#     # Total expansion capacity added
-#     total_expansion_capacity = gp.quicksum(
-#         expansions[facility_id] * child_care_capacity_data[facility_id]
-#         for facility_id in child_care_capacity_data if facility_id == zip_code
-#     )
-#
-#     # Add constraint for total capacity (new + expansion) >= required capacity
-#     model.addConstr(total_new_capacity + total_expansion_capacity >= required_capacity,
-#                     name=f"capacity_constraint_{zip_code}")
 
 print("Starting to add constraints to satisfy the increase of child care capacity and 0-5 capacity...")
 total_deserts = len(child_care_deserts)
@@ -260,6 +147,7 @@ for i in range(len(locations)):
             distance_l2 = l2_distance(lat_i, lon_i, lat_j, lon_j)
             if distance_l2 < 0.06:
                 # Add constraint that at most one facility can be built/expanded if they're too close
+                print(f"{i}-{j}")
                 model.addConstr(
                     decision_variables_new_facilities[f"{row_number_i}_small"][1] +
                     decision_variables_new_facilities[f"{row_number_i}_medium"][1] +
@@ -270,13 +158,27 @@ for i in range(len(locations)):
                     name=f"distance_constraint_{row_number_i}_{row_number_j}"
                 )
 
-# Solve the model
-model.optimize()
+model.setObjective(
+    gp.quicksum(new_facility_info["small"]["cost"] * var for rowNumber_type, (zipcode, var) in
+                decision_variables_new_facilities.items() if rowNumber_type.endswith("_small")) +
+    gp.quicksum(new_facility_info["medium"]["cost"] * var for rowNumber_type, (zipcode, var) in
+                decision_variables_new_facilities.items() if rowNumber_type.endswith("_medium")) +
+    gp.quicksum(new_facility_info["large"]["cost"] * var for rowNumber_type, (zipcode, var) in
+                decision_variables_new_facilities.items() if rowNumber_type.endswith("_large")) +
+    gp.quicksum(expansion_cost[facility_id] for facility_id in decision_variables_expansion),
+    GRB.MINIMIZE
+)
 
-# Output the result
-if model.status == GRB.OPTIMAL:
-    print(f'Optimal objective value: {model.objVal}')
-    for v in model.getVars():
-        print(f'{v.varName}: {v.x}')
-else:
-    print("No optimal solution found")
+
+
+
+if __name__ == '__main__':
+    # Solve the model
+    model.optimize()
+
+    # Output the result
+    if model.status == GRB.OPTIMAL:
+        print(f'Optimal objective value: {model.objVal}')
+
+    else:
+        print("No optimal solution found")
