@@ -74,12 +74,11 @@ we assume the max social converage ratio of all zips is 1,
 
 
 $`0.9 \leq SCR_z \leq 1 \quad \forall z`$
-
+note this is for every zip whether child care desert or not
 ### for social converage ratio of younger children(0-5) no constrain
 $`SCR_z^{0-5} =\text{ social coverage ratio of region with zip code z}`$
 
 $`SCR_z^{0-5}=\frac {\sum_{f \in F_z} (1+x_f) \cdot C_{facility\_id}^{0-5} + \sum_{r \in R_z} (b_{r, \text{small}}\times 50 + b_{r, \text{medium}} \times 100 + b_{r, \text{large}}\times 200)}{p_z}`$
-
 
 
 
