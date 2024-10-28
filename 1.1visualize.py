@@ -11,46 +11,46 @@ if __name__ == '__main__':
     with open('var_values.json', 'r') as f:
         var_values = json.load(f)
 
-    # # Extract facility_id and visualize on map
-    # with open('data/child_care_regulated.csv', 'r', encoding="UTF-8") as csvfile:
-    #     reader = csv.reader(csvfile)
-    #     child_care_data = {row[0]: row for row in reader}
-    # zipcode_data_list = []
-    #
-    # for key, value in var_values.items():
-    #     if key.startswith("expansion_percentage_"):
-    #         facility_id = key.split('_')[-1]
-    #         if value > 0 and facility_id in child_care_data:
-    #             row = child_care_data[facility_id]
-    #             zipcode = row[5]
-    #
-    #             # Append the necessary data to the list
-    #             zipcode_data_list.append({
-    #                 'ZIP_Code': zipcode,
-    #                 'County_Name': row[6],
-    #                 'Cluster': value
-    #             })
-    #
-    # # Create a DataFrame with the collected data
-    # zipcode_data = pd.DataFrame(zipcode_data_list)
-    #
-    # with urlopen(
-    #         'https://raw.githubusercontent.com/OpenDataDE/State-zip-code-GeoJSON/master/ny_new_york_zip_codes_geo.min.json') as response:
-    #     zipcodes = json.load(response)
-    # fig = px.choropleth(zipcode_data,
-    #                     geojson=zipcodes,
-    #                     locations='ZIP_Code',
-    #                     color='Cluster',
-    #                     color_continuous_scale="Viridis",
-    #                     range_color=(1, 5),
-    #                     featureidkey="properties.ZCTA5CE10",
-    #                     scope="usa",
-    #                     labels={'Cluster': 'Cluster_Category'}
-    #                     )
-    # fig.update_layout(margin={"r": 0, "t": 0, "l": 0, "b": 0})
-    #
-    # # Save the plot
-    # fig.write_html("visuals/choropleth_map_expansion.html")
+    # Extract facility_id and visualize on map
+    with open('data/child_care_regulated.csv', 'r', encoding="UTF-8") as csvfile:
+        reader = csv.reader(csvfile)
+        child_care_data = {row[0]: row for row in reader}
+    zipcode_data_list = []
+
+    for key, value in var_values.items():
+        if key.startswith("expansion_percentage_"):
+            facility_id = key.split('_')[-1]
+            if value > 0 and facility_id in child_care_data:
+                row = child_care_data[facility_id]
+                zipcode = row[5]
+
+                # Append the necessary data to the list
+                zipcode_data_list.append({
+                    'ZIP_Code': zipcode,
+                    'County_Name': row[6],
+                    'Cluster': value
+                })
+
+    # Create a DataFrame with the collected data
+    zipcode_data = pd.DataFrame(zipcode_data_list)
+
+    with urlopen(
+            'https://raw.githubusercontent.com/OpenDataDE/State-zip-code-GeoJSON/master/ny_new_york_zip_codes_geo.min.json') as response:
+        zipcodes = json.load(response)
+    fig = px.choropleth(zipcode_data,
+                        geojson=zipcodes,
+                        locations='ZIP_Code',
+                        color='Cluster',
+                        color_continuous_scale="Viridis",
+                        range_color=(1, 5),
+                        featureidkey="properties.ZCTA5CE10",
+                        scope="usa",
+                        labels={'Cluster': 'Cluster_Category'}
+                        )
+    fig.update_layout(margin={"r": 0, "t": 0, "l": 0, "b": 0})
+
+    # Save the plot
+    fig.write_html("visuals/choropleth_map_expansion.html")
 
     # Extract location data and visualize on map
     with open('data/potential_locations.csv', 'r', encoding="UTF-8") as csvfile:
