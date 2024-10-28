@@ -2,7 +2,7 @@ import json
 import csv
 import gurobipy as gp
 from gurobipy import GRB
-from util import create_decision_variables_for_new_facilities, create_decision_variables_for_expansion, \
+from util import create_decision_variables_for_new_facilities, create_decision_variables_for_expansion_probelm1, \
     new_facility_info
 
 # Read child_care_deserts from file
@@ -15,7 +15,7 @@ decision_variables_new_facilities = {}
 decision_variables_expansion = {}
 model = gp.Model("LP")
 create_decision_variables_for_new_facilities(model, decision_variables_new_facilities)
-create_decision_variables_for_expansion(model, decision_variables_expansion)
+create_decision_variables_for_expansion_probelm1(model, decision_variables_expansion)
 
 
 expansion_costs = {}
