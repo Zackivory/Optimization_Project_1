@@ -12,7 +12,9 @@ $`R \in\{2,3,\dots ,215401\} \text{ is the set contain all row number of potenti
 save all decision variable for new facility in a dictionary called
 decision_variables_new_facilities
 
-the sum of three binary decision variable for each row is less equal to 1,
+# Binary decision variable for expansion 
+
+It indicates for the given facility_id we should expand or not
 
 $`b_{facility\_id}, \quad \forall \text{facility\_id} \in F`$
 # continious decision variable for expansion

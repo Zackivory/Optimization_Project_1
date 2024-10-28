@@ -1,5 +1,5 @@
- problem 1
-# binary decision variable for new facility
+# Problem 1 math formulation
+# Binary decision variable for new facility
 
 $` b_{r, \text{small}}, \quad \forall r \in R`$
 
@@ -10,9 +10,10 @@ $` b_{r, \text{large}} , \quad \forall r \in R`$
 $`R \in\{2,3,\dots ,215401\} \text{ is the set contain all row number of potential\_locations.csv exculde row 1 which is the heading}`$
 
 save all decision variable for new facility in a dictionary called
-decision_variables_new_facilities
 
-the sum of three binary decision variable for each row is less equal to 1,
+# Binary decision variable for expansion 
+
+It indicates for the given facility_id we should expand or not
 
 $`b_{facility\_id}, \quad \forall \text{facility\_id} \in F`$
 # continious decision variable for expansion
@@ -30,6 +31,8 @@ decision_variables_expansion
 
 # constrain 
 ## new facility type constrain 
+
+
 $`b_{r, \text{small}} + b_{r, \text{medium}} + b_{r, \text{large}} \leq 1, \quad \forall r \in R`$
 
 ## required capacity constrain
