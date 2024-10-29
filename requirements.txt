@@ -14,3 +14,4 @@ geopandas==0.8.1
 pyshp==2.1.2
 shapely
 rtree
+haversine

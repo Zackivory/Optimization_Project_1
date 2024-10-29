@@ -2,8 +2,9 @@ import json
 import gurobipy as gp
 from gurobipy import GRB
 import math
-from util import create_decision_variables_for_expansion, create_decision_variables_for_new_facilities, \
+from util import create_decision_variables_for_expansion_problem2and3, create_decision_variables_for_new_facilities, \
     new_facility_info
+from haversine import haversine, Unit
 
 # Load the data
 with open('temp/child_care_deserts.json', 'r') as file:
@@ -21,36 +22,20 @@ decision_variables_expansion = {}
 decision_variables_new_facilities = {}
 model = gp.Model("Child_Care_Desert_Expansion_and_Distance")
 create_decision_variables_for_new_facilities(model, decision_variables_new_facilities)
-create_decision_variables_for_expansion(model, decision_variables_expansion)
+create_decision_variables_for_expansion_problem2and3(model, decision_variables_expansion)
 
 
-# Step 2: Define decision variables for expansion and auxiliary variables for piecewise cost
-piecewise_expansion = {}
-for facility_id, (info_list, var) in decision_variables_expansion.items():
-    # Define auxiliary variables for the three expansion ranges
-    piecewise_expansion[facility_id] = {
-        'x1': model.addVar(vtype=GRB.CONTINUOUS, name=f"expansion_x1_{facility_id}", lb=0, ub=0.1),  # 0-10%
-        'x2': model.addVar(vtype=GRB.CONTINUOUS, name=f"expansion_x2_{facility_id}", lb=0, ub=0.05),  # 10-15%
-        'x3': model.addVar(vtype=GRB.CONTINUOUS, name=f"expansion_x3_{facility_id}", lb=0, ub=0.05)  # 15-20%
-    }
-
-    # Ensure that the total expansion is the sum of expansions in each piece
-    model.addConstr(var == piecewise_expansion[facility_id]['x1'] +
-                    piecewise_expansion[facility_id]['x2'] +
-                    piecewise_expansion[facility_id]['x3'], name=f"expansion_split_{facility_id}")
 
 # Step 3: Define expansion costs using the piecewise expansions
 expansion_cost = {}
-for facility_id, (details, var) in decision_variables_expansion.items():
+for facility_id, (details, x, y1, y2, y3) in decision_variables_expansion.items():
     original_capacity = details[2]  # original_total_capacity is at index 2
-
-    # Calculate the cost for each expansion range
-    cost_x1 = 20000 + 200 * original_capacity * piecewise_expansion[facility_id]['x1']  # Up to 10%
-    cost_x2 = 400 * original_capacity * piecewise_expansion[facility_id]['x2']  # 10-15%
-    cost_x3 = 1000 * original_capacity * piecewise_expansion[facility_id]['x3']  # 15-20%
-
-    # Total cost for expansion
-    expansion_cost[facility_id] = cost_x1 + cost_x2 + cost_x3
+    original_0_5_capacity = details[1]
+    expansion_cost[facility_id] = (
+        y1 * ((20000 + 200 * original_capacity) * x + 100 * x * original_0_5_capacity) +
+        y2 * ((20000 + 400 * original_capacity) * x + 100 * x * original_0_5_capacity) +
+        y3 * ((20000 + 1000 * original_capacity) * x + 100 * x * original_0_5_capacity)
+    )
 
 
 
@@ -61,7 +46,7 @@ for child_care_desert_zipcode, child_care_desert_info in child_care_deserts.item
     sum_of_increase_child_care_capacity = 0
     sum_of_increase_0_5_capacity = 0
 
-    for facility_id, (info_list, var) in decision_variables_expansion.items():
+    for facility_id, (info_list, var,_,_,_) in decision_variables_expansion.items():
         zipcode, original_0_5_capacity, original_total_capacity, _, _ = info_list
 
         if zipcode == child_care_desert_zipcode:
@@ -94,24 +79,6 @@ print("Finished adding constraints.")
 
 
 
-# Step 5: Distance constraint - Ensure no two facilities are within 0.06 miles of each other
-def haversine(lat1, lon1, lat2, lon2):
-    R = 3959.87433  # Radius of Earth in miles
-    phi1 = math.radians(lat1)
-    phi2 = math.radians(lat2)
-    delta_phi = math.radians(lat2 - lat1)
-    delta_lambda = math.radians(lon2 - lon1)
-    a = math.sin(delta_phi / 2.0) ** 2 + math.cos(phi1) * math.cos(phi2) * math.sin(delta_lambda / 2.0) ** 2
-    c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
-    return R * c  # Distance in miles
-
-def l2_distance(lat1, lon1, lat2, lon2):
-    # Convert latitude and longitude from degrees to miles
-    lat1_miles = lat1 * 69.0
-    lon1_miles = lon1 * 69.0
-    lat2_miles = lat2 * 69.0
-    lon2_miles = lon2 * 69.0
-    return math.sqrt((lat2_miles - lat1_miles) ** 2 + (lon2_miles - lon1_miles) ** 2)
 
 
 from itertools import combinations
@@ -144,8 +111,10 @@ for i in range(len(locations)):
         row_number_j, lat_j, lon_j = locations[j]
         
         if abs(lon_i - lon_j) < 0.06 / 69.0:
-            distance_l2 = l2_distance(lat_i, lon_i, lat_j, lon_j)
-            if distance_l2 < 0.06:
+
+            distance = haversine((lat_i, lon_i), (lat_j, lon_j), unit=Unit.MILES)
+
+            if distance < 0.06:
                 # Add constraint that at most one facility can be built/expanded if they're too close
                 print(f"{i}-{j}")
                 model.addConstr(

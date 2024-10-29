@@ -28,14 +28,12 @@ decision_variables_expansion
 ## new facility type constrain 
 $`b_{r, \text{small}} + b_{r, \text{medium}} + b_{r, \text{large}} \leq 1, \quad \forall r \in R`$
 
-## piecewise expansion constrain
-$`0\leq x_{\text{level 1, facility\_id}} \leq 0.1`$
+## piecewise decision variable and constrain
+- $` y_{1,\text{facility\_id}} `$: Equals 1 if the facility is assigned to **Level 1** (i.e., $` 0 \leq x_{\text{facility\_id}} \leq 0.1 `$), and 0 otherwise.
+- $` y_{2,\text{facility\_id}} `$: Equals 1 if the facility is assigned to **Level 2** (i.e., $` 0.1 \leq x_{\text{facility\_id}} \leq 0.15 `$), and 0 otherwise.
+- $` y_{3,\text{facility\_id}} `$: Equals 1 if the facility is assigned to **Level 3** (i.e., $` 0.15 \leq x_{\text{facility\_id}} \leq 0.2 `$), and 0 otherwise.
 
-$`0\leq x_{\text{level 2, facility\_id}} \leq 0.05`$
-
-$`0\leq x_{\text{level 3, facility\_id}} \leq 0.05`$
-
-$`x_{\text{level 1, facility\_id}}+x_{\text{level 2, facility\_id}}+x_{\text{level 3, facility\_id}} = x_{\text{facility\_id}},  \forall \text{facility\_id} \in F`$
+$`y_{1,\text{facility\_id}} + y_{2,\text{facility\_id}} + y_{3,\text{facility\_id}} = 1 \quad \forall \text{facility\_id} \in F`$
 
 
 ## required capacity constrain
@@ -70,8 +68,8 @@ $`p_z \text{ is the population of region with zip code z}`$
 
 
 difference of social coverage ratio between any zip is less or equal to 0.1
-we assume the max social converage ratio of all zips is 1,
-
+we assume the max social converage ratio of all zips is 1
+![img.png](..%2Fvisuals%2Fimg.png)
 
 $`0.9 \leq SCR_z \leq 1 \quad \forall z`$
 note this is for every zip whether child care desert or not
@@ -87,9 +85,14 @@ $`SCR_z^{0-5}=\frac {\sum_{f \in F_z} (1+x_f) \cdot C_{facility\_id}^{0-5} + \su
 ## budge constrain 
 $`C_1= \sum_{r \in R}b_{r, \text{small}}\times 65,000 + b_{r, \text{medium}} \times 95,000 + b_{r, \text{large}}\times 115,000`$
 
-$`C_2=\sum_{f \in F}\left(20000 + 200 \times C_{facility\_id} \times x_{\text{level 1, facility\_id}} + 400 \times C_{facility\_id} \times x_{\text{level 2, facility\_id}} + 1000 \times C_{facility\_id} \times x_{\text{level 3, facility\_id}}\right)`$
+$`C_2 = \sum_{\text{facility\_id} \in F} \left[ y_{1,\text{facility\_id}} \left( (20000 + 200 \times C_{\text{facility\_id}}) \times x_{\text{facility\_id}} + 100 \times x_{\text{facility\_id}} \times C^{0-5}_{\text{facility\_id}} \right) \right.`$
 
-$`C_1+C_2 \leq 100,000,000 `$
+$` + y_{2,\text{facility\_id}} \left( (20000 + 400 \times C_{\text{facility\_id}}) \times x_{\text{facility\_id}} + 100 \times x_{\text{facility\_id}} \times C^{0-5}_{\text{facility\_id}} \right) `$
+
+$`+ y_{3,\text{facility\_id}} \left( (20000 + 1000 \times C_{\text{facility\_id}}) \times x_{\text{facility\_id}} + 100 \times x_{\text{facility\_id}} \times C^{0-5}_{\text{facility\_id}} \right) ]`$
+
+
+$`C_1+C_2 \leq 1,000,000,000 `$
 # objective
 $`SCI_z=\text{social coverage index of zip code z}`$
 

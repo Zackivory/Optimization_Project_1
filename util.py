@@ -1,4 +1,6 @@
 import csv
+import math
+
 import gurobipy as gp
 from gurobipy import GRB
 
@@ -8,27 +10,21 @@ new_facility_info = {
     "large": {"total_slots": 400, "slots_0_5": 200, "cost": 115000}
 }
 
-def create_decision_variables_for_new_facilities(model, decision_variables_new_facilities):
-    with open('data/potential_locations.csv', 'r') as file:
+def create_decision_variables_for_new_facilities_problem1(model, decision_variables_new_facilities):
+    with open('data/population.csv', 'r', encoding="UTF-8") as file:
         reader = csv.reader(file)
         next(reader)  # Skip header
-        for row_number, row in enumerate(reader, start=1):
-            zipcode = row[0]
-            latitude = float(row[1])
-            longitude = float(row[2])
-            decision_variables_new_facilities[f"{row_number}_small"] = (
-            zipcode, model.addVar(vtype=GRB.BINARY, name=f"location_{row_number}_small"))
-            decision_variables_new_facilities[f"{row_number}_medium"] = (
-            zipcode, model.addVar(vtype=GRB.BINARY, name=f"location_{row_number}_medium"))
-            decision_variables_new_facilities[f"{row_number}_large"] = (
-            zipcode, model.addVar(vtype=GRB.BINARY, name=f"location_{row_number}_large"))
-            # TODO check
-            model.addConstr(decision_variables_new_facilities[f"{row_number}_small"][1] +
-                            decision_variables_new_facilities[f"{row_number}_medium"][1] +
-                            decision_variables_new_facilities[f"{row_number}_large"][1] <= 1,
-                            name=f"at_most_one_facility_at_{row_number}")
+        zipcodes = set(row[0] for row in reader)
+        for zipcode in zipcodes:
+            decision_variables_new_facilities[f"d_{zipcode}_small"] = (
+                zipcode, model.addVar(vtype=GRB.INTEGER ))
+            decision_variables_new_facilities[f"d_{zipcode}_medium"] = (
+                zipcode, model.addVar(vtype=GRB.INTEGER))
+            decision_variables_new_facilities[f"d_{zipcode}_large"] = (
+                zipcode, model.addVar(vtype=GRB.INTEGER))
+  
 
-def create_decision_variables_for_expansion_probelm1(model, decision_variables_expansion):
+def create_decision_variables_for_expansion_problem1(model, decision_variables_expansion):
     with open('data/child_care_regulated.csv', 'r', encoding="UTF-8") as file:
         reader = csv.reader(file)
         next(reader)  # Skip header
@@ -52,11 +48,29 @@ def create_decision_variables_for_expansion_probelm1(model, decision_variables_e
 
             # Add constraints for expansion
             if original_total_capacity <= 500:
-                model.addConstr((original_total_capacity * (decision_variables_expansion[facility_id][1] / 100)) <= 500,
+                model.addConstr((original_total_capacity * (1 + decision_variables_expansion[facility_id][1])) <= 500,
                                 name=f"max_capacity_{facility_id}")
+def create_decision_variables_for_new_facilities(model, decision_variables_new_facilities):
+    with open('data/potential_locations.csv', 'r') as file:
+        reader = csv.reader(file)
+        next(reader)  # Skip header
+        for row_number, row in enumerate(reader, start=1):
+            zipcode = row[0]
+            latitude = float(row[1])
+            longitude = float(row[2])
+            decision_variables_new_facilities[f"{row_number}_small"] = (
+            zipcode, model.addVar(vtype=GRB.BINARY, name=f"location_{row_number}_small"))
+            decision_variables_new_facilities[f"{row_number}_medium"] = (
+            zipcode, model.addVar(vtype=GRB.BINARY, name=f"location_{row_number}_medium"))
+            decision_variables_new_facilities[f"{row_number}_large"] = (
+            zipcode, model.addVar(vtype=GRB.BINARY, name=f"location_{row_number}_large"))
+            # TODO check
+            model.addConstr(decision_variables_new_facilities[f"{row_number}_small"][1] +
+                            decision_variables_new_facilities[f"{row_number}_medium"][1] +
+                            decision_variables_new_facilities[f"{row_number}_large"][1] <= 1,
+                            name=f"at_most_one_facility_at_{row_number}")
 
-
-def create_decision_variables_for_expansion(model, decision_variables_expansion):
+def create_decision_variables_for_expansion_problem2and3(model, decision_variables_expansion):
     with open('data/child_care_regulated.csv', 'r', encoding="UTF-8") as file:
         reader = csv.reader(file)
         next(reader)  # Skip header
@@ -74,11 +88,26 @@ def create_decision_variables_for_expansion(model, decision_variables_expansion)
             longitude = float(row[14]) if row[14] else 0.0
             original_0_5_capacity = original_infant_capacity + original_toddler_capacity
 
+            y1 = model.addVar(vtype=GRB.BINARY, name=f"y1_{facility_id}")
+            y2 = model.addVar(vtype=GRB.BINARY, name=f"y2_{facility_id}")
+            y3 = model.addVar(vtype=GRB.BINARY, name=f"y3_{facility_id}")
+            x = model.addVar(vtype=GRB.CONTINUOUS, name=f"expansion_percentage_{facility_id}", lb=0, ub=0.2)
+            model.addConstr(y1 + y2 + y3 == 1, name=f"expansion_choice_{facility_id}")
             decision_variables_expansion[facility_id] = (
                 [zipcode, original_0_5_capacity, original_total_capacity, latitude, longitude],
-                model.addVar(vtype=GRB.CONTINUOUS, name=f"expansion_percentage_{facility_id}", lb=0, ub=0.2))
+                x,y1,y2,y3)
+            
+            model.addConstr(x >= 0 * y1 + 0.1 * y2 + 0.15 * y3, name=f"min_expansion_{facility_id}")
+            model.addConstr(x <= 0.1 * y1 + 0.15 * y2 + 0.2 * y3, name=f"max_expansion_{facility_id}")
 
             # Add constraints for expansion
             if original_total_capacity <= 500:
-                model.addConstr((original_total_capacity * (decision_variables_expansion[facility_id][1] / 100)) <= 500,
+                model.addConstr((original_total_capacity * (1 + x)) <= 500,
                                 name=f"max_capacity_{facility_id}")
+def l2_distance(lat1, lon1, lat2, lon2):
+    # Convert latitude and longitude from degrees to miles
+    lat1_miles = lat1 * 69.0
+    lon1_miles = lon1 * 69.0
+    lat2_miles = lat2 * 69.0
+    lon2_miles = lon2 * 69.0
+    return math.sqrt((lat2_miles - lat1_miles) ** 2 + (lon2_miles - lon1_miles) ** 2)
