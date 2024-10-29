@@ -1,4 +1,5 @@
 # problem 2
+# todo check problem 5 ip exercise 
 # binary decision variable for new facility
 
 $` b_{r, \text{small}}, \quad \forall r \in R`$
@@ -23,24 +24,22 @@ $`0 \leq x_{\text{facility\_id}} \leq 0.2, \quad \forall \text{facility\_id} \in
 
 $`F \text{ is the set of all facility id in child\_care\_regulated.csv }`$
 
+# piecewise decision variable and constrain
+- $` y_{1,\text{facility\_id}} `$: Equals 1 if the facility is assigned to **Level 1** (i.e., $` 0 \leq x_{\text{facility\_id}} \leq 0.1 `$), and 0 otherwise.
+- $` y_{2,\text{facility\_id}} `$: Equals 1 if the facility is assigned to **Level 2** (i.e., $` 0.1 \leq x_{\text{facility\_id}} \leq 0.15 `$), and 0 otherwise.
+- $` y_{3,\text{facility\_id}} `$: Equals 1 if the facility is assigned to **Level 3** (i.e., $` 0.15 \leq x_{\text{facility\_id}} \leq 0.2 `$), and 0 otherwise.
+
+$`y_{1,\text{facility\_id}} + y_{2,\text{facility\_id}} + y_{3,\text{facility\_id}} = 1 \quad \forall \text{facility\_id} \in F`$
 
 
-save all decision variable for expansion in a dictionary called 
-decision_variables_expansion
 
 # constrain 
 ## new facility type constrain 
 $`b_{r, \text{small}} + b_{r, \text{medium}} + b_{r, \text{large}} \leq 1, \quad \forall r \in R`$
 
-## piecewise expansion constrain
-$`0\leq x_{\text{level 1, facility\_id}} \leq 0.1`$
+$`x_{\text{facility\_id}} \geq 0 \times y_{1,\text{facility\_id}} + 0.1 \times y_{2,\text{facility\_id}} + 0.15 \times y_{3,\text{facility\_id}} \quad \forall \text{facility\_id} \in F`$
 
-$`0\leq x_{\text{level 2, facility\_id}} \leq 0.05`$
-
-$`0\leq x_{\text{level 3, facility\_id}} \leq 0.05`$
-
-$`x_{\text{level 1, facility\_id}}+x_{\text{level 2, facility\_id}}+x_{\text{level 3, facility\_id}} = x_{\text{facility\_id}},  \forall \text{facility\_id} \in F`$
-
+$`x_{\text{facility\_id}} \leq 0.1 \times y_{1,\text{facility\_id}} + 0.15 \times y_{2,\text{facility\_id}} + 0.2 \times y_{3,\text{facility\_id}} \quad \forall \text{facility\_id} \in F`$
 
 ## required capacity constrain
 $`\delta_z \quad \text{Required increase in child care capacity for zipcode $z$}`$
@@ -69,8 +68,12 @@ $`\sum_{f \in F_z} x_f \cdot C^{0-5}_{facility\_id} + \sum_{r \in R_z} (b_{r, \t
 $`\forall z, \forall r_i, r_j \in R_z, \text{if } \text{distance}(r_i, r_j) < 0.06 \text{ then } b_{r_i, \text{small}} + b_{r_i, \text{medium}} + b_{r_i, \text{large}} + b_{r_j, \text{small}} + b_{r_j, \text{medium}} + b_{r_j, \text{large}} \leq 1`$
 
 # objective
-$`C_1= \sum_{r \in R}b_{r, \text{small}}\times 65,000 + b_{r, \text{medium}} \times 95,000 + b_{r, \text{large}}\times 115,000`$
 
-$`C_2=\sum_{f \in F}\left(20000 + 200 \times C_{facility\_id} \times x_{\text{level 1, facility\_id}} + 400 \times C_{facility\_id} \times x_{\text{level 2, facility\_id}} + 1000 \times C_{facility\_id} \times x_{\text{level 3, facility\_id}}\right)`$
+# todo when the slope change it apply to the al capacity check ed discussion 
+$`C_2 = \sum_{\text{facility\_id} \in F} \left[ y_{1,\text{facility\_id}} \left( (20000 + 200 \times C_{\text{facility\_id}}) \times x_{\text{facility\_id}} + 100 \times x_{\text{facility\_id}} \times C^{0-5}_{\text{facility\_id}} \right) \right.`$
 
-$`\min C_1+C_2 `$
+$` + y_{2,\text{facility\_id}} \left( (20000 + 400 \times C_{\text{facility\_id}}) \times x_{\text{facility\_id}} + 100 \times x_{\text{facility\_id}} \times C^{0-5}_{\text{facility\_id}} \right) `$
+
+$`+ y_{3,\text{facility\_id}} \left( (20000 + 1000 \times C_{\text{facility\_id}}) \times x_{\text{facility\_id}} + 100 \times x_{\text{facility\_id}} \times C^{0-5}_{\text{facility\_id}} \right) ]`$
+
+$`\min C_1+C_{2}`$

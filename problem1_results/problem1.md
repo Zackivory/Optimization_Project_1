@@ -1,21 +1,14 @@
 # Problem 1 math formulation
-# Binary decision variable for new facility
+# discrete decision variable for new facility number in each child chare deserts,enoted using zip code 
 
-$` b_{r, \text{small}}, \quad \forall r \in R`$
+$` d_{z,\text{small}},\quad \forall z \in Z`$
 
-$` b_{r, \text{medium}}, \quad \forall r \in R`$
+$` d_{z,\text{medium}},\quad \forall z \in Z`$
 
-$` b_{r, \text{large}} , \quad \forall r \in R`$
+$` d_{z,\text{large}} , \quad \forall z \in Z`$
 
-$`R \in\{2,3,\dots ,215401\} \text{ is the set contain all row number of potential\_locations.csv exculde row 1 which is the heading}`$
 
-save all decision variable for new facility in a dictionary called
 
-# Binary decision variable for expansion 
-
-It indicates for the given facility_id we should expand or not
-
-$`b_{facility\_id}, \quad \forall \text{facility\_id} \in F`$
 # continious decision variable for expansion
 
 $`1.2=+120\%`$
@@ -30,10 +23,6 @@ save all decision variable for expansion in a dictionary called
 decision_variables_expansion
 
 # constrain 
-## new facility type constrain 
-
-
-$`b_{r, \text{small}} + b_{r, \text{medium}} + b_{r, \text{large}} \leq 1, \quad \forall r \in R`$
 
 ## required capacity constrain
 $`\delta_z \quad \text{Required increase in child care capacity for zipcode $z$}`$
@@ -49,17 +38,20 @@ $`C_{facility\_id} \text{ original total capacity of the facility with given id}
 $`C^{0-5}_{facility\_id} \text{ original 0-5 years old care capacity of the facility with given id}`$
 
 ### child care capacity 
-$`\sum_{f \in F_z} x_{\text{facility\_id}} \cdot C_{facility\_id} + \sum_{r \in R_z} (b_{r, \text{small}}\times 100 + b_{r, \text{medium}} \times 200 + b_{r, \text{large}}\times 400) \geq \delta_z \quad \forall z`$
+$`\sum_{f \in F_z} x_{\text{facility\_id}} \cdot C_{facility\_id} + d_{z,small}\times 100 + d_{z,medium} \times 200 + d_{z,large}\times 400) \geq \delta_z \quad \forall z`$
 
 ### 0-5 years old care capacity
-$`\sum_{f \in F_z} x_{\text{facility\_id}} \cdot C^{0-5}_{facility\_id} + \sum_{r \in R_z} (b_{r, \text{small}}\times 50 + b_{r, \text{medium}} \times 100 + b_{r, \text{large}}\times 200) \geq \delta_z^{0-5} \quad \forall z`$
+$`\sum_{f \in F_z} x_{\text{facility\_id}} \cdot C^{0-5}_{facility\_id} + d_{z,small}\times 50 + d_{z,medium} \times 100 + d_{z,large}\times 200) \geq \delta_z^{0-5} \quad \forall z`$
 
 
 
 
 # objective
-$`C_1= \sum_{r \in R}b_{r, \text{small}}\times 65,000 + b_{r, \text{medium}} \times 95,000 + b_{r, \text{large}}\times 115,000`$
+   (baseline cost + capacity-based cost * existing capacity) * expansion rate + (addtional cost per slot for children under 5) * slots expanded for children under 5
 
-$`C_2=\sum_{f \in F}(20000+200\times C_{facility\_id})\times b_{facility\_id}`$
+$`C_1= \sum_{z \in Z}d_{z,small}\times 65,000 + d_{z,medium} \times 95,000 + d_{z,large}\times 115,000`$
+
+$`C_2=\sum_{f \in F}(20000+200\times C_{facility\_id}) \times x_{\text{facility\_id}}+100\times x_{\text{facility\_id}} \times C^{0-5}_{facility\_id} `$
+# todo update to the ed cost        
 
 $`\min C_1+C_2 `$

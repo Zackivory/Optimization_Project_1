@@ -2,7 +2,7 @@ import json
 import csv
 import gurobipy as gp
 from gurobipy import GRB
-from util import create_decision_variables_for_new_facilities, create_decision_variables_for_expansion_probelm1, \
+from util import create_decision_variables_for_new_facilities_problem1, create_decision_variables_for_expansion_problem1, \
     new_facility_info
 
 # Read child_care_deserts from file
@@ -13,9 +13,9 @@ with open('temp/child_care_deserts.json', 'r', encoding="UTF-8") as file:
 
 decision_variables_new_facilities = {}
 decision_variables_expansion = {}
-model = gp.Model("LP")
-create_decision_variables_for_new_facilities(model, decision_variables_new_facilities)
-create_decision_variables_for_expansion_probelm1(model, decision_variables_expansion)
+model = gp.Model("IP")
+create_decision_variables_for_new_facilities_problem1(model, decision_variables_new_facilities)
+create_decision_variables_for_expansion_problem1(model, decision_variables_expansion)
 
 
 expansion_costs = {}
@@ -23,8 +23,8 @@ expansion_costs = {}
 
 
 for facility_id, (info_list, var) in decision_variables_expansion.items():
-    _, _, original_total_capacity,_,_ = info_list
-    expansion_costs[facility_id] = 20000 + (200 * original_total_capacity)
+    _, original_0_5_capacity, original_total_capacity,_,_ = info_list
+    expansion_costs[facility_id] = (20000 + (200 * original_total_capacity)) * var + 100*original_0_5_capacity*var
 
 
 # Add constraints to satisfy the increase of child care capacity and 0-5 capacity
@@ -42,10 +42,9 @@ for child_care_desert_zipcode, child_care_desert_info in child_care_deserts.item
             sum_of_increase_child_care_capacity += var * original_total_capacity
             sum_of_increase_0_5_capacity += var * original_0_5_capacity
 
-    for rowNumber_type, (zipcode, var) in decision_variables_new_facilities.items():
-        facility_type = rowNumber_type.split('_')[-1]
-
+    for key, (zipcode, var) in decision_variables_new_facilities.items():
         if zipcode == child_care_desert_zipcode:
+            facility_type =key.split('_')[-1]
             if facility_type == "small":
                 sum_of_increase_child_care_capacity += new_facility_info["small"]["total_slots"] * var
                 sum_of_increase_0_5_capacity += new_facility_info["small"]["slots_0_5"] * var
@@ -55,7 +54,6 @@ for child_care_desert_zipcode, child_care_desert_info in child_care_deserts.item
             elif facility_type == "large":
                 sum_of_increase_child_care_capacity += new_facility_info["large"]["total_slots"] * var
                 sum_of_increase_0_5_capacity += new_facility_info["large"]["slots_0_5"] * var
-
     model.addConstr(sum_of_increase_child_care_capacity >= child_care_desert_info["difference_child_care_capacity"],
                     name=f"increase_child_care_capacity_{child_care_desert_zipcode}")
     model.addConstr(sum_of_increase_0_5_capacity >= child_care_desert_info["difference_0_5_capacity"],
@@ -65,15 +63,13 @@ for child_care_desert_zipcode, child_care_desert_info in child_care_deserts.item
     print(current_desert)
 
 
-
-
 model.setObjective(
-    gp.quicksum(new_facility_info["small"]["cost"] * var for rowNumber_type, (zipcode, var) in
-                decision_variables_new_facilities.items() if rowNumber_type.endswith("_small")) +
-    gp.quicksum(new_facility_info["medium"]["cost"] * var for rowNumber_type, (zipcode, var) in
-                decision_variables_new_facilities.items() if rowNumber_type.endswith("_medium")) +
-    gp.quicksum(new_facility_info["large"]["cost"] * var for rowNumber_type, (zipcode, var) in
-                decision_variables_new_facilities.items() if rowNumber_type.endswith("_large")) +
+    gp.quicksum(new_facility_info["small"]["cost"] * var for key, (zipcode, var) in
+                decision_variables_new_facilities.items() if key.endswith("_small")) +
+    gp.quicksum(new_facility_info["medium"]["cost"] * var for key, (zipcode, var) in
+                decision_variables_new_facilities.items() if key.endswith("_medium")) +
+    gp.quicksum(new_facility_info["large"]["cost"] * var for key, (zipcode, var) in
+                decision_variables_new_facilities.items() if key.endswith("_large")) +
     gp.quicksum(expansion_costs[facility_id] for facility_id in decision_variables_expansion),
     GRB.MINIMIZE
 )
