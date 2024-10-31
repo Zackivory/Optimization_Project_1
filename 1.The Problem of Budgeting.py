@@ -1,5 +1,7 @@
 import json
 import csv
+from pprint import pprint
+
 import gurobipy as gp
 from gurobipy import GRB
 from util import create_decision_variables_for_new_facilities_problem1, create_decision_variables_for_expansion_problem1, \
@@ -22,9 +24,9 @@ expansion_costs = {}
 # Define the cost and size of new facilities
 
 
-for facility_id, (info_list, var) in decision_variables_expansion.items():
-    _, original_0_5_capacity, original_total_capacity,_,_ = info_list
-    expansion_costs[facility_id] = (20000 + (200 * original_total_capacity)) * var + 100*original_0_5_capacity*var
+for facility_id, (info_list, x, z) in decision_variables_expansion.items():
+    _, original_0_5_capacity, original_total_capacity, _, _ = info_list
+    expansion_costs[facility_id] = (20000 + (200 * original_total_capacity)) * x + 100 * z
 
 
 # Add constraints to satisfy the increase of child care capacity and 0-5 capacity
@@ -35,12 +37,11 @@ for child_care_desert_zipcode, child_care_desert_info in child_care_deserts.item
     sum_of_increase_child_care_capacity = 0
     sum_of_increase_0_5_capacity = 0
 
-    for facility_id, (info_list, var) in decision_variables_expansion.items():
-        zipcode, original_0_5_capacity, original_total_capacity, _, _ = info_list
-
+    for facility_id, ([zipcode, original_0_5_capacity, original_total_capacity, _, _], x, z) in decision_variables_expansion.items():
         if zipcode == child_care_desert_zipcode:
-            sum_of_increase_child_care_capacity += var * original_total_capacity
-            sum_of_increase_0_5_capacity += var * original_0_5_capacity
+
+            sum_of_increase_child_care_capacity += x * original_total_capacity
+            sum_of_increase_0_5_capacity += z
 
     for key, (zipcode, var) in decision_variables_new_facilities.items():
         if zipcode == child_care_desert_zipcode:
@@ -83,7 +84,7 @@ if __name__ == '__main__':
         for var in model.getVars():
             var_values[var.varName] = var.x
 
-        with open('var_values.json', 'w') as f:
+        with open('problem1_results/decision_variable_results.json', 'w') as f:
             json.dump(var_values, f)
 
         print(f'Optimal Objective Value: {model.objVal}')

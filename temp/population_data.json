@@ -1,9 +1,4 @@
 {
-    "06390": {
-        "total_population": 53,
-        "children_population": 3,
-        "children_0_5_population": 0
-    },
     "10001": {
         "total_population": 27004,
         "children_population": 1999,
@@ -79,20 +74,10 @@
         "children_population": 486,
         "children_0_5_population": 193
     },
-    "10018": {
-        "total_population": 8659,
-        "children_population": 522,
-        "children_0_5_population": 242
-    },
     "10019": {
         "total_population": 42766,
         "children_population": 2048,
         "children_0_5_population": 1099
-    },
-    "10020": {
-        "total_population": 0,
-        "children_population": 0,
-        "children_0_5_population": 0
     },
     "10021": {
         "total_population": 40642,
@@ -214,130 +199,10 @@
         "children_population": 2442,
         "children_0_5_population": 1243
     },
-    "10103": {
-        "total_population": 0,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "10110": {
-        "total_population": 0,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "10111": {
-        "total_population": 0,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "10112": {
-        "total_population": 0,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "10115": {
-        "total_population": 0,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "10119": {
-        "total_population": 0,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
     "10128": {
         "total_population": 56695,
         "children_population": 5477,
         "children_0_5_population": 2791
-    },
-    "10152": {
-        "total_population": 0,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "10153": {
-        "total_population": 0,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "10154": {
-        "total_population": 0,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "10162": {
-        "total_population": 1523,
-        "children_population": 151,
-        "children_0_5_population": 134
-    },
-    "10165": {
-        "total_population": 0,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "10167": {
-        "total_population": 0,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "10168": {
-        "total_population": 0,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "10169": {
-        "total_population": 0,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "10170": {
-        "total_population": 0,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "10171": {
-        "total_population": 0,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "10172": {
-        "total_population": 0,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "10173": {
-        "total_population": 0,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "10174": {
-        "total_population": 0,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "10177": {
-        "total_population": 0,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "10199": {
-        "total_population": 0,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "10271": {
-        "total_population": 0,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "10278": {
-        "total_population": 0,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "10279": {
-        "total_population": 161,
-        "children_population": 0,
-        "children_0_5_population": 0
     },
     "10280": {
         "total_population": 8843,
@@ -398,11 +263,6 @@
         "total_population": 26239,
         "children_population": 4575,
         "children_0_5_population": 2167
-    },
-    "10311": {
-        "total_population": 0,
-        "children_population": 0,
-        "children_0_5_population": 0
     },
     "10312": {
         "total_population": 63473,
@@ -539,30 +399,15 @@
         "children_population": 6280,
         "children_0_5_population": 3115
     },
-    "10501": {
-        "total_population": 1416,
-        "children_population": 115,
-        "children_0_5_population": 16
-    },
     "10502": {
         "total_population": 5745,
         "children_population": 953,
         "children_0_5_population": 322
     },
-    "10503": {
-        "total_population": 94,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
     "10504": {
         "total_population": 8047,
         "children_population": 1410,
         "children_0_5_population": 521
-    },
-    "10505": {
-        "total_population": 1132,
-        "children_population": 155,
-        "children_0_5_population": 44
     },
     "10506": {
         "total_population": 6340,
@@ -604,21 +449,6 @@
         "children_population": 688,
         "children_0_5_population": 283
     },
-    "10517": {
-        "total_population": 417,
-        "children_population": 14,
-        "children_0_5_population": 11
-    },
-    "10518": {
-        "total_population": 830,
-        "children_population": 48,
-        "children_0_5_population": 11
-    },
-    "10519": {
-        "total_population": 122,
-        "children_population": 19,
-        "children_0_5_population": 0
-    },
     "10520": {
         "total_population": 12662,
         "children_population": 1787,
@@ -638,11 +468,6 @@
         "total_population": 4344,
         "children_population": 470,
         "children_0_5_population": 131
-    },
-    "10526": {
-        "total_population": 1939,
-        "children_population": 234,
-        "children_0_5_population": 81
     },
     "10527": {
         "total_population": 608,
@@ -679,45 +504,20 @@
         "children_population": 1815,
         "children_0_5_population": 515
     },
-    "10537": {
-        "total_population": 2961,
-        "children_population": 415,
-        "children_0_5_population": 100
-    },
     "10538": {
         "total_population": 17605,
         "children_population": 3644,
         "children_0_5_population": 1213
-    },
-    "10540": {
-        "total_population": 114,
-        "children_population": 14,
-        "children_0_5_population": 0
     },
     "10541": {
         "total_population": 26116,
         "children_population": 3659,
         "children_0_5_population": 1299
     },
-    "10542": {
-        "total_population": 0,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
     "10543": {
         "total_population": 21281,
         "children_population": 3589,
         "children_0_5_population": 1142
-    },
-    "10545": {
-        "total_population": 203,
-        "children_population": 8,
-        "children_0_5_population": 0
-    },
-    "10546": {
-        "total_population": 1022,
-        "children_population": 117,
-        "children_0_5_population": 47
     },
     "10547": {
         "total_population": 7665,
@@ -789,11 +589,6 @@
         "children_population": 360,
         "children_0_5_population": 212
     },
-    "10578": {
-        "total_population": 1788,
-        "children_population": 360,
-        "children_0_5_population": 28
-    },
     "10579": {
         "total_population": 8171,
         "children_population": 849,
@@ -838,16 +633,6 @@
         "total_population": 7213,
         "children_population": 756,
         "children_0_5_population": 356
-    },
-    "10596": {
-        "total_population": 796,
-        "children_population": 51,
-        "children_0_5_population": 14
-    },
-    "10597": {
-        "total_population": 642,
-        "children_population": 111,
-        "children_0_5_population": 8
     },
     "10598": {
         "total_population": 29066,
@@ -954,30 +739,10 @@
         "children_population": 3764,
         "children_0_5_population": 1279
     },
-    "10910": {
-        "total_population": 0,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "10911": {
-        "total_population": 12,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
     "10913": {
         "total_population": 5286,
         "children_population": 614,
         "children_0_5_population": 141
-    },
-    "10914": {
-        "total_population": 384,
-        "children_population": 83,
-        "children_0_5_population": 0
-    },
-    "10915": {
-        "total_population": 0,
-        "children_population": 0,
-        "children_0_5_population": 0
     },
     "10916": {
         "total_population": 4445,
@@ -1008,11 +773,6 @@
         "total_population": 4268,
         "children_population": 603,
         "children_0_5_population": 222
-    },
-    "10922": {
-        "total_population": 1289,
-        "children_population": 190,
-        "children_0_5_population": 176
     },
     "10923": {
         "total_population": 8419,
@@ -1049,21 +809,6 @@
         "children_population": 1219,
         "children_0_5_population": 323
     },
-    "10931": {
-        "total_population": 1131,
-        "children_population": 261,
-        "children_0_5_population": 133
-    },
-    "10932": {
-        "total_population": 43,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "10933": {
-        "total_population": 401,
-        "children_population": 118,
-        "children_0_5_population": 42
-    },
     "10940": {
         "total_population": 51853,
         "children_population": 8239,
@@ -1084,11 +829,6 @@
         "children_population": 15662,
         "children_0_5_population": 7131
     },
-    "10953": {
-        "total_population": 0,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
     "10954": {
         "total_population": 27587,
         "children_population": 3452,
@@ -1098,11 +838,6 @@
         "total_population": 30738,
         "children_population": 4312,
         "children_0_5_population": 1619
-    },
-    "10958": {
-        "total_population": 2925,
-        "children_population": 335,
-        "children_0_5_population": 92
     },
     "10960": {
         "total_population": 14222,
@@ -1134,11 +869,6 @@
         "children_population": 246,
         "children_0_5_population": 167
     },
-    "10969": {
-        "total_population": 999,
-        "children_population": 250,
-        "children_0_5_population": 102
-    },
     "10970": {
         "total_population": 11571,
         "children_population": 2256,
@@ -1154,25 +884,10 @@
         "children_population": 426,
         "children_0_5_population": 208
     },
-    "10975": {
-        "total_population": 246,
-        "children_population": 76,
-        "children_0_5_population": 0
-    },
-    "10976": {
-        "total_population": 2056,
-        "children_population": 169,
-        "children_0_5_population": 25
-    },
     "10977": {
         "total_population": 70555,
         "children_population": 20994,
         "children_0_5_population": 8574
-    },
-    "10979": {
-        "total_population": 0,
-        "children_population": 0,
-        "children_0_5_population": 0
     },
     "10980": {
         "total_population": 13702,
@@ -1189,25 +904,10 @@
         "children_population": 560,
         "children_0_5_population": 298
     },
-    "10985": {
-        "total_population": 42,
-        "children_population": 6,
-        "children_0_5_population": 6
-    },
-    "10986": {
-        "total_population": 1529,
-        "children_population": 149,
-        "children_0_5_population": 44
-    },
     "10987": {
         "total_population": 3809,
         "children_population": 388,
         "children_0_5_population": 155
-    },
-    "10988": {
-        "total_population": 683,
-        "children_population": 137,
-        "children_0_5_population": 66
     },
     "10989": {
         "total_population": 8651,
@@ -1234,11 +934,6 @@
         "children_population": 758,
         "children_0_5_population": 279
     },
-    "10996": {
-        "total_population": 6386,
-        "children_population": 1344,
-        "children_0_5_population": 533
-    },
     "10998": {
         "total_population": 3548,
         "children_population": 613,
@@ -1258,11 +953,6 @@
         "total_population": 15702,
         "children_population": 1879,
         "children_0_5_population": 894
-    },
-    "11005": {
-        "total_population": 2175,
-        "children_population": 0,
-        "children_0_5_population": 0
     },
     "11010": {
         "total_population": 25751,
@@ -1534,11 +1224,6 @@
         "children_population": 1861,
         "children_0_5_population": 487
     },
-    "11249": {
-        "total_population": 45087,
-        "children_population": 9610,
-        "children_0_5_population": 4774
-    },
     "11354": {
         "total_population": 53371,
         "children_population": 5249,
@@ -1563,11 +1248,6 @@
         "total_population": 37647,
         "children_population": 4850,
         "children_0_5_population": 2023
-    },
-    "11359": {
-        "total_population": 0,
-        "children_population": 0,
-        "children_0_5_population": 0
     },
     "11360": {
         "total_population": 19719,
@@ -1623,11 +1303,6 @@
         "total_population": 28164,
         "children_population": 3150,
         "children_0_5_population": 1279
-    },
-    "11371": {
-        "total_population": 0,
-        "children_population": 0,
-        "children_0_5_population": 0
     },
     "11372": {
         "total_population": 67001,
@@ -1734,11 +1409,6 @@
         "children_population": 3557,
         "children_0_5_population": 1260
     },
-    "11424": {
-        "total_population": 0,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
     "11426": {
         "total_population": 19733,
         "children_population": 2507,
@@ -1758,11 +1428,6 @@
         "total_population": 27845,
         "children_population": 3021,
         "children_0_5_population": 1097
-    },
-    "11430": {
-        "total_population": 332,
-        "children_population": 37,
-        "children_0_5_population": 0
     },
     "11432": {
         "total_population": 64268,
@@ -1789,16 +1454,6 @@
         "children_population": 2851,
         "children_0_5_population": 912
     },
-    "11439": {
-        "total_population": 2140,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "11451": {
-        "total_population": 0,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
     "11501": {
         "total_population": 21434,
         "children_population": 2873,
@@ -1808,11 +1463,6 @@
         "total_population": 7111,
         "children_population": 822,
         "children_0_5_population": 255
-    },
-    "11509": {
-        "total_population": 1682,
-        "children_population": 194,
-        "children_0_5_population": 40
     },
     "11510": {
         "total_population": 35070,
@@ -1854,20 +1504,10 @@
         "children_population": 1465,
         "children_0_5_population": 372
     },
-    "11547": {
-        "total_population": 585,
-        "children_population": 53,
-        "children_0_5_population": 0
-    },
     "11548": {
         "total_population": 2230,
         "children_population": 100,
         "children_0_5_population": 20
-    },
-    "11549": {
-        "total_population": 2508,
-        "children_population": 2,
-        "children_0_5_population": 2
     },
     "11550": {
         "total_population": 60668,
@@ -1888,11 +1528,6 @@
         "total_population": 36856,
         "children_population": 5304,
         "children_0_5_population": 2192
-    },
-    "11556": {
-        "total_population": 0,
-        "children_population": 0,
-        "children_0_5_population": 0
     },
     "11557": {
         "total_population": 8290,
@@ -1938,11 +1573,6 @@
         "total_population": 4272,
         "children_population": 355,
         "children_0_5_population": 58
-    },
-    "11569": {
-        "total_population": 1110,
-        "children_population": 41,
-        "children_0_5_population": 0
     },
     "11570": {
         "total_population": 28262,
@@ -2019,11 +1649,6 @@
         "children_population": 3469,
         "children_0_5_population": 1366
     },
-    "11697": {
-        "total_population": 3946,
-        "children_population": 547,
-        "children_0_5_population": 230
-    },
     "11701": {
         "total_population": 27874,
         "children_population": 3455,
@@ -2089,11 +1714,6 @@
         "children_population": 10009,
         "children_0_5_population": 3967
     },
-    "11718": {
-        "total_population": 3181,
-        "children_population": 550,
-        "children_0_5_population": 136
-    },
     "11719": {
         "total_population": 3519,
         "children_population": 508,
@@ -2149,11 +1769,6 @@
         "children_population": 4615,
         "children_0_5_population": 1908
     },
-    "11732": {
-        "total_population": 3546,
-        "children_population": 447,
-        "children_0_5_population": 108
-    },
     "11733": {
         "total_population": 17304,
         "children_population": 2368,
@@ -2168,11 +1783,6 @@
         "total_population": 20077,
         "children_population": 3159,
         "children_0_5_population": 1466
-    },
-    "11739": {
-        "total_population": 1400,
-        "children_population": 91,
-        "children_0_5_population": 22
     },
     "11740": {
         "total_population": 11010,
@@ -2289,11 +1899,6 @@
         "children_population": 873,
         "children_0_5_population": 337
     },
-    "11770": {
-        "total_population": 112,
-        "children_population": 11,
-        "children_0_5_population": 0
-    },
     "11771": {
         "total_population": 10068,
         "children_population": 1566,
@@ -2359,11 +1964,6 @@
         "children_population": 2241,
         "children_0_5_population": 1049
     },
-    "11789": {
-        "total_population": 7434,
-        "children_population": 1038,
-        "children_0_5_population": 194
-    },
     "11790": {
         "total_population": 19282,
         "children_population": 1717,
@@ -2383,11 +1983,6 @@
         "total_population": 30865,
         "children_population": 4540,
         "children_0_5_population": 1568
-    },
-    "11794": {
-        "total_population": 1425,
-        "children_population": 0,
-        "children_0_5_population": 0
     },
     "11795": {
         "total_population": 25650,
@@ -2419,30 +2014,10 @@
         "children_population": 4610,
         "children_0_5_population": 1406
     },
-    "11804": {
-        "total_population": 4443,
-        "children_population": 816,
-        "children_0_5_population": 294
-    },
     "11901": {
         "total_population": 32330,
         "children_population": 4062,
         "children_0_5_population": 2260
-    },
-    "11930": {
-        "total_population": 741,
-        "children_population": 51,
-        "children_0_5_population": 18
-    },
-    "11931": {
-        "total_population": 0,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "11932": {
-        "total_population": 1032,
-        "children_population": 163,
-        "children_0_5_population": 0
     },
     "11933": {
         "total_population": 6975,
@@ -2464,11 +2039,6 @@
         "children_population": 2988,
         "children_0_5_population": 1328
     },
-    "11939": {
-        "total_population": 1564,
-        "children_population": 82,
-        "children_0_5_population": 37
-    },
     "11940": {
         "total_population": 5462,
         "children_population": 807,
@@ -2479,25 +2049,10 @@
         "children_population": 346,
         "children_0_5_population": 119
     },
-    "11942": {
-        "total_population": 5620,
-        "children_population": 508,
-        "children_0_5_population": 193
-    },
-    "11944": {
-        "total_population": 4799,
-        "children_population": 363,
-        "children_0_5_population": 84
-    },
     "11946": {
         "total_population": 17517,
         "children_population": 2083,
         "children_0_5_population": 940
-    },
-    "11947": {
-        "total_population": 153,
-        "children_population": 0,
-        "children_0_5_population": 0
     },
     "11948": {
         "total_population": 535,
@@ -2519,11 +2074,6 @@
         "children_population": 2850,
         "children_0_5_population": 1224
     },
-    "11952": {
-        "total_population": 5231,
-        "children_population": 445,
-        "children_0_5_population": 147
-    },
     "11953": {
         "total_population": 13701,
         "children_population": 1819,
@@ -2539,55 +2089,15 @@
         "children_population": 354,
         "children_0_5_population": 267
     },
-    "11956": {
-        "total_population": 305,
-        "children_population": 16,
-        "children_0_5_population": 13
-    },
-    "11957": {
-        "total_population": 1220,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "11958": {
-        "total_population": 893,
-        "children_population": 133,
-        "children_0_5_population": 38
-    },
-    "11959": {
-        "total_population": 632,
-        "children_population": 94,
-        "children_0_5_population": 42
-    },
-    "11960": {
-        "total_population": 962,
-        "children_population": 81,
-        "children_0_5_population": 20
-    },
     "11961": {
         "total_population": 13126,
         "children_population": 1443,
         "children_0_5_population": 416
     },
-    "11962": {
-        "total_population": 344,
-        "children_population": 22,
-        "children_0_5_population": 0
-    },
     "11963": {
         "total_population": 8445,
         "children_population": 1181,
         "children_0_5_population": 326
-    },
-    "11964": {
-        "total_population": 3129,
-        "children_population": 594,
-        "children_0_5_population": 379
-    },
-    "11965": {
-        "total_population": 491,
-        "children_population": 0,
-        "children_0_5_population": 0
     },
     "11967": {
         "total_population": 26860,
@@ -2599,35 +2109,10 @@
         "children_population": 1617,
         "children_0_5_population": 536
     },
-    "11970": {
-        "total_population": 563,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
     "11971": {
         "total_population": 6286,
         "children_population": 1114,
         "children_0_5_population": 365
-    },
-    "11972": {
-        "total_population": 413,
-        "children_population": 58,
-        "children_0_5_population": 0
-    },
-    "11973": {
-        "total_population": 39,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "11975": {
-        "total_population": 426,
-        "children_population": 21,
-        "children_0_5_population": 13
-    },
-    "11976": {
-        "total_population": 2437,
-        "children_population": 201,
-        "children_0_5_population": 102
     },
     "11977": {
         "total_population": 3069,
@@ -2644,16 +2129,6 @@
         "children_population": 530,
         "children_0_5_population": 339
     },
-    "12007": {
-        "total_population": 325,
-        "children_population": 81,
-        "children_0_5_population": 0
-    },
-    "12008": {
-        "total_population": 427,
-        "children_population": 74,
-        "children_0_5_population": 43
-    },
     "12009": {
         "total_population": 8322,
         "children_population": 1179,
@@ -2663,16 +2138,6 @@
         "total_population": 27213,
         "children_population": 4137,
         "children_0_5_population": 1517
-    },
-    "12015": {
-        "total_population": 4135,
-        "children_population": 449,
-        "children_0_5_population": 126
-    },
-    "12017": {
-        "total_population": 419,
-        "children_population": 19,
-        "children_0_5_population": 0
     },
     "12018": {
         "total_population": 7300,
@@ -2694,21 +2159,6 @@
         "children_population": 190,
         "children_0_5_population": 48
     },
-    "12023": {
-        "total_population": 2374,
-        "children_population": 383,
-        "children_0_5_population": 144
-    },
-    "12024": {
-        "total_population": 83,
-        "children_population": 2,
-        "children_0_5_population": 0
-    },
-    "12025": {
-        "total_population": 5260,
-        "children_population": 560,
-        "children_0_5_population": 276
-    },
     "12027": {
         "total_population": 4244,
         "children_population": 618,
@@ -2719,70 +2169,20 @@
         "children_population": 215,
         "children_0_5_population": 56
     },
-    "12029": {
-        "total_population": 991,
-        "children_population": 51,
-        "children_0_5_population": 10
-    },
-    "12031": {
-        "total_population": 191,
-        "children_population": 28,
-        "children_0_5_population": 25
-    },
-    "12032": {
-        "total_population": 737,
-        "children_population": 51,
-        "children_0_5_population": 22
-    },
     "12033": {
         "total_population": 7640,
         "children_population": 868,
         "children_0_5_population": 316
-    },
-    "12035": {
-        "total_population": 484,
-        "children_population": 45,
-        "children_0_5_population": 0
-    },
-    "12036": {
-        "total_population": 220,
-        "children_population": 50,
-        "children_0_5_population": 32
     },
     "12037": {
         "total_population": 4083,
         "children_population": 500,
         "children_0_5_population": 228
     },
-    "12040": {
-        "total_population": 28,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "12041": {
-        "total_population": 319,
-        "children_population": 4,
-        "children_0_5_population": 0
-    },
-    "12042": {
-        "total_population": 297,
-        "children_population": 15,
-        "children_0_5_population": 0
-    },
     "12043": {
         "total_population": 7719,
         "children_population": 792,
         "children_0_5_population": 255
-    },
-    "12045": {
-        "total_population": 467,
-        "children_population": 85,
-        "children_0_5_population": 33
-    },
-    "12046": {
-        "total_population": 519,
-        "children_population": 81,
-        "children_0_5_population": 28
     },
     "12047": {
         "total_population": 23293,
@@ -2793,11 +2193,6 @@
         "total_population": 6050,
         "children_population": 545,
         "children_0_5_population": 262
-    },
-    "12052": {
-        "total_population": 1974,
-        "children_population": 228,
-        "children_0_5_population": 128
     },
     "12053": {
         "total_population": 4253,
@@ -2819,50 +2214,15 @@
         "children_population": 238,
         "children_0_5_population": 133
     },
-    "12058": {
-        "total_population": 1163,
-        "children_population": 71,
-        "children_0_5_population": 0
-    },
-    "12059": {
-        "total_population": 1417,
-        "children_population": 133,
-        "children_0_5_population": 20
-    },
-    "12060": {
-        "total_population": 1813,
-        "children_population": 124,
-        "children_0_5_population": 20
-    },
     "12061": {
         "total_population": 10179,
         "children_population": 1644,
         "children_0_5_population": 779
     },
-    "12062": {
-        "total_population": 1662,
-        "children_population": 129,
-        "children_0_5_population": 56
-    },
-    "12063": {
-        "total_population": 609,
-        "children_population": 44,
-        "children_0_5_population": 26
-    },
-    "12064": {
-        "total_population": 254,
-        "children_population": 18,
-        "children_0_5_population": 15
-    },
     "12065": {
         "total_population": 44563,
         "children_population": 6643,
         "children_0_5_population": 2435
-    },
-    "12066": {
-        "total_population": 1834,
-        "children_population": 287,
-        "children_0_5_population": 151
     },
     "12067": {
         "total_population": 1457,
@@ -2874,40 +2234,10 @@
         "children_population": 363,
         "children_0_5_population": 63
     },
-    "12069": {
-        "total_population": 483,
-        "children_population": 50,
-        "children_0_5_population": 25
-    },
-    "12070": {
-        "total_population": 2499,
-        "children_population": 176,
-        "children_0_5_population": 43
-    },
-    "12071": {
-        "total_population": 217,
-        "children_population": 30,
-        "children_0_5_population": 14
-    },
-    "12072": {
-        "total_population": 2992,
-        "children_population": 566,
-        "children_0_5_population": 224
-    },
     "12074": {
         "total_population": 2956,
         "children_population": 402,
         "children_0_5_population": 197
-    },
-    "12075": {
-        "total_population": 3159,
-        "children_population": 222,
-        "children_0_5_population": 72
-    },
-    "12076": {
-        "total_population": 1271,
-        "children_population": 125,
-        "children_0_5_population": 33
     },
     "12077": {
         "total_population": 6752,
@@ -2918,11 +2248,6 @@
         "total_population": 23144,
         "children_population": 3315,
         "children_0_5_population": 1200
-    },
-    "12082": {
-        "total_population": 2,
-        "children_population": 0,
-        "children_0_5_population": 0
     },
     "12083": {
         "total_population": 3900,
@@ -2944,55 +2269,25 @@
         "children_population": 113,
         "children_0_5_population": 59
     },
-    "12087": {
-        "total_population": 1279,
-        "children_population": 122,
-        "children_0_5_population": 51
-    },
     "12090": {
         "total_population": 5782,
         "children_population": 1088,
         "children_0_5_population": 454
-    },
-    "12092": {
-        "total_population": 1604,
-        "children_population": 158,
-        "children_0_5_population": 44
     },
     "12093": {
         "total_population": 1385,
         "children_population": 102,
         "children_0_5_population": 53
     },
-    "12094": {
-        "total_population": 2676,
-        "children_population": 384,
-        "children_0_5_population": 80
-    },
     "12095": {
         "total_population": 12586,
         "children_population": 1651,
         "children_0_5_population": 626
     },
-    "12106": {
-        "total_population": 2171,
-        "children_population": 200,
-        "children_0_5_population": 58
-    },
-    "12108": {
-        "total_population": 408,
-        "children_population": 19,
-        "children_0_5_population": 10
-    },
     "12110": {
         "total_population": 19744,
         "children_population": 2241,
         "children_0_5_population": 809
-    },
-    "12115": {
-        "total_population": 95,
-        "children_population": 0,
-        "children_0_5_population": 0
     },
     "12116": {
         "total_population": 1351,
@@ -3014,11 +2309,6 @@
         "children_population": 75,
         "children_0_5_population": 36
     },
-    "12121": {
-        "total_population": 2358,
-        "children_population": 304,
-        "children_0_5_population": 121
-    },
     "12122": {
         "total_population": 3585,
         "children_population": 314,
@@ -3028,31 +2318,6 @@
         "total_population": 4938,
         "children_population": 705,
         "children_0_5_population": 346
-    },
-    "12124": {
-        "total_population": 246,
-        "children_population": 42,
-        "children_0_5_population": 42
-    },
-    "12125": {
-        "total_population": 1092,
-        "children_population": 104,
-        "children_0_5_population": 48
-    },
-    "12130": {
-        "total_population": 431,
-        "children_population": 93,
-        "children_0_5_population": 8
-    },
-    "12131": {
-        "total_population": 188,
-        "children_population": 33,
-        "children_0_5_population": 17
-    },
-    "12132": {
-        "total_population": 133,
-        "children_population": 18,
-        "children_0_5_population": 13
     },
     "12134": {
         "total_population": 4304,
@@ -3074,11 +2339,6 @@
         "children_population": 322,
         "children_0_5_population": 116
     },
-    "12139": {
-        "total_population": 286,
-        "children_population": 29,
-        "children_0_5_population": 13
-    },
     "12140": {
         "total_population": 1412,
         "children_population": 147,
@@ -3094,11 +2354,6 @@
         "children_population": 2857,
         "children_0_5_population": 1223
     },
-    "12147": {
-        "total_population": 412,
-        "children_population": 29,
-        "children_0_5_population": 0
-    },
     "12148": {
         "total_population": 4371,
         "children_population": 461,
@@ -3109,20 +2364,10 @@
         "children_population": 305,
         "children_0_5_population": 103
     },
-    "12150": {
-        "total_population": 589,
-        "children_population": 67,
-        "children_0_5_population": 67
-    },
     "12151": {
         "total_population": 871,
         "children_population": 114,
         "children_0_5_population": 53
-    },
-    "12153": {
-        "total_population": 703,
-        "children_population": 126,
-        "children_0_5_population": 5
     },
     "12154": {
         "total_population": 2820,
@@ -3133,11 +2378,6 @@
         "total_population": 1748,
         "children_population": 184,
         "children_0_5_population": 19
-    },
-    "12156": {
-        "total_population": 831,
-        "children_population": 131,
-        "children_0_5_population": 41
     },
     "12157": {
         "total_population": 4574,
@@ -3159,75 +2399,15 @@
         "children_population": 106,
         "children_0_5_population": 63
     },
-    "12161": {
-        "total_population": 35,
-        "children_population": 9,
-        "children_0_5_population": 9
-    },
-    "12164": {
-        "total_population": 485,
-        "children_population": 28,
-        "children_0_5_population": 7
-    },
-    "12165": {
-        "total_population": 198,
-        "children_population": 22,
-        "children_0_5_population": 14
-    },
-    "12166": {
-        "total_population": 1505,
-        "children_population": 188,
-        "children_0_5_population": 119
-    },
     "12167": {
         "total_population": 2414,
         "children_population": 218,
         "children_0_5_population": 95
     },
-    "12168": {
-        "total_population": 1749,
-        "children_population": 202,
-        "children_0_5_population": 75
-    },
-    "12169": {
-        "total_population": 379,
-        "children_population": 83,
-        "children_0_5_population": 10
-    },
     "12170": {
         "total_population": 5225,
         "children_population": 684,
         "children_0_5_population": 334
-    },
-    "12172": {
-        "total_population": 211,
-        "children_population": 63,
-        "children_0_5_population": 40
-    },
-    "12173": {
-        "total_population": 2038,
-        "children_population": 356,
-        "children_0_5_population": 90
-    },
-    "12174": {
-        "total_population": 588,
-        "children_population": 45,
-        "children_0_5_population": 14
-    },
-    "12175": {
-        "total_population": 700,
-        "children_population": 131,
-        "children_0_5_population": 27
-    },
-    "12176": {
-        "total_population": 366,
-        "children_population": 34,
-        "children_0_5_population": 20
-    },
-    "12177": {
-        "total_population": 455,
-        "children_population": 50,
-        "children_0_5_population": 43
     },
     "12180": {
         "total_population": 53807,
@@ -3248,11 +2428,6 @@
         "total_population": 7288,
         "children_population": 986,
         "children_0_5_population": 347
-    },
-    "12185": {
-        "total_population": 1785,
-        "children_population": 203,
-        "children_0_5_population": 86
     },
     "12186": {
         "total_population": 6325,
@@ -3278,26 +2453,6 @@
         "total_population": 641,
         "children_population": 83,
         "children_0_5_population": 41
-    },
-    "12192": {
-        "total_population": 1496,
-        "children_population": 63,
-        "children_0_5_population": 0
-    },
-    "12193": {
-        "total_population": 1674,
-        "children_population": 177,
-        "children_0_5_population": 74
-    },
-    "12194": {
-        "total_population": 177,
-        "children_population": 24,
-        "children_0_5_population": 2
-    },
-    "12195": {
-        "total_population": 184,
-        "children_population": 0,
-        "children_0_5_population": 0
     },
     "12196": {
         "total_population": 3954,
@@ -3364,16 +2519,6 @@
         "children_population": 1670,
         "children_0_5_population": 798
     },
-    "12222": {
-        "total_population": 6358,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "12226": {
-        "total_population": 0,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
     "12302": {
         "total_population": 27915,
         "children_population": 4131,
@@ -3434,31 +2579,6 @@
         "children_population": 5,
         "children_0_5_population": 1
     },
-    "12407": {
-        "total_population": 132,
-        "children_population": 13,
-        "children_0_5_population": 4
-    },
-    "12409": {
-        "total_population": 958,
-        "children_population": 105,
-        "children_0_5_population": 56
-    },
-    "12410": {
-        "total_population": 329,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "12411": {
-        "total_population": 377,
-        "children_population": 45,
-        "children_0_5_population": 25
-    },
-    "12412": {
-        "total_population": 537,
-        "children_population": 26,
-        "children_0_5_population": 0
-    },
     "12413": {
         "total_population": 3144,
         "children_population": 332,
@@ -3469,205 +2589,55 @@
         "children_population": 961,
         "children_0_5_population": 561
     },
-    "12416": {
-        "total_population": 205,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "12417": {
-        "total_population": 873,
-        "children_population": 17,
-        "children_0_5_population": 0
-    },
-    "12418": {
-        "total_population": 294,
-        "children_population": 34,
-        "children_0_5_population": 29
-    },
     "12419": {
         "total_population": 881,
         "children_population": 148,
         "children_0_5_population": 83
-    },
-    "12420": {
-        "total_population": 351,
-        "children_population": 99,
-        "children_0_5_population": 99
-    },
-    "12421": {
-        "total_population": 224,
-        "children_population": 13,
-        "children_0_5_population": 0
-    },
-    "12422": {
-        "total_population": 398,
-        "children_population": 5,
-        "children_0_5_population": 0
-    },
-    "12423": {
-        "total_population": 1255,
-        "children_population": 110,
-        "children_0_5_population": 9
-    },
-    "12424": {
-        "total_population": 261,
-        "children_population": 11,
-        "children_0_5_population": 0
-    },
-    "12427": {
-        "total_population": 1025,
-        "children_population": 292,
-        "children_0_5_population": 196
     },
     "12428": {
         "total_population": 7032,
         "children_population": 740,
         "children_0_5_population": 153
     },
-    "12429": {
-        "total_population": 153,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "12430": {
-        "total_population": 1341,
-        "children_population": 171,
-        "children_0_5_population": 39
-    },
     "12431": {
         "total_population": 1845,
         "children_population": 256,
         "children_0_5_population": 107
-    },
-    "12432": {
-        "total_population": 581,
-        "children_population": 32,
-        "children_0_5_population": 0
-    },
-    "12433": {
-        "total_population": 628,
-        "children_population": 136,
-        "children_0_5_population": 59
     },
     "12434": {
         "total_population": 984,
         "children_population": 188,
         "children_0_5_population": 85
     },
-    "12435": {
-        "total_population": 231,
-        "children_population": 36,
-        "children_0_5_population": 7
-    },
-    "12436": {
-        "total_population": 430,
-        "children_population": 4,
-        "children_0_5_population": 0
-    },
-    "12438": {
-        "total_population": 48,
-        "children_population": 4,
-        "children_0_5_population": 0
-    },
-    "12439": {
-        "total_population": 297,
-        "children_population": 11,
-        "children_0_5_population": 8
-    },
-    "12440": {
-        "total_population": 1493,
-        "children_population": 127,
-        "children_0_5_population": 38
-    },
-    "12441": {
-        "total_population": 105,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "12442": {
-        "total_population": 648,
-        "children_population": 38,
-        "children_0_5_population": 30
-    },
     "12443": {
         "total_population": 3582,
         "children_population": 404,
         "children_0_5_population": 181
-    },
-    "12444": {
-        "total_population": 538,
-        "children_population": 9,
-        "children_0_5_population": 0
     },
     "12446": {
         "total_population": 4894,
         "children_population": 565,
         "children_0_5_population": 270
     },
-    "12448": {
-        "total_population": 142,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
     "12449": {
         "total_population": 3193,
         "children_population": 277,
         "children_0_5_population": 100
-    },
-    "12450": {
-        "total_population": 221,
-        "children_population": 36,
-        "children_0_5_population": 10
     },
     "12451": {
         "total_population": 1044,
         "children_population": 99,
         "children_0_5_population": 64
     },
-    "12452": {
-        "total_population": 27,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "12453": {
-        "total_population": 240,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "12454": {
-        "total_population": 456,
-        "children_population": 88,
-        "children_0_5_population": 36
-    },
     "12455": {
         "total_population": 1810,
         "children_population": 218,
         "children_0_5_population": 46
     },
-    "12456": {
-        "total_population": 728,
-        "children_population": 100,
-        "children_0_5_population": 17
-    },
     "12457": {
         "total_population": 1283,
         "children_population": 155,
         "children_0_5_population": 99
-    },
-    "12458": {
-        "total_population": 3501,
-        "children_population": 147,
-        "children_0_5_population": 61
-    },
-    "12459": {
-        "total_population": 68,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "12460": {
-        "total_population": 215,
-        "children_population": 53,
-        "children_0_5_population": 43
     },
     "12461": {
         "total_population": 1371,
@@ -3684,80 +2654,15 @@
         "children_population": 36,
         "children_0_5_population": 14
     },
-    "12465": {
-        "total_population": 384,
-        "children_population": 18,
-        "children_0_5_population": 10
-    },
     "12466": {
         "total_population": 2070,
         "children_population": 295,
         "children_0_5_population": 116
     },
-    "12468": {
-        "total_population": 1325,
-        "children_population": 123,
-        "children_0_5_population": 60
-    },
-    "12469": {
-        "total_population": 803,
-        "children_population": 44,
-        "children_0_5_population": 24
-    },
-    "12470": {
-        "total_population": 778,
-        "children_population": 108,
-        "children_0_5_population": 62
-    },
-    "12471": {
-        "total_population": 268,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "12472": {
-        "total_population": 1177,
-        "children_population": 73,
-        "children_0_5_population": 24
-    },
-    "12473": {
-        "total_population": 663,
-        "children_population": 64,
-        "children_0_5_population": 0
-    },
-    "12474": {
-        "total_population": 856,
-        "children_population": 56,
-        "children_0_5_population": 19
-    },
-    "12475": {
-        "total_population": 460,
-        "children_population": 55,
-        "children_0_5_population": 24
-    },
     "12477": {
         "total_population": 18557,
         "children_population": 2101,
         "children_0_5_population": 695
-    },
-    "12480": {
-        "total_population": 324,
-        "children_population": 36,
-        "children_0_5_population": 5
-    },
-    "12481": {
-        "total_population": 1493,
-        "children_population": 44,
-        "children_0_5_population": 0
-    },
-    "12482": {
-        "total_population": 550,
-        "children_population": 5,
-        "children_0_5_population": 0
-    },
-    "12483": {
-        "total_population": 71,
-        "children_population": 7,
-        "children_0_5_population": 0
     },
     "12484": {
         "total_population": 3373,
@@ -3769,56 +2674,6 @@
         "children_population": 232,
         "children_0_5_population": 46
     },
-    "12486": {
-        "total_population": 1760,
-        "children_population": 252,
-        "children_0_5_population": 45
-    },
-    "12487": {
-        "total_population": 3935,
-        "children_population": 389,
-        "children_0_5_population": 102
-    },
-    "12489": {
-        "total_population": 154,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "12490": {
-        "total_population": 0,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "12491": {
-        "total_population": 2059,
-        "children_population": 285,
-        "children_0_5_population": 128
-    },
-    "12492": {
-        "total_population": 181,
-        "children_population": 7,
-        "children_0_5_population": 7
-    },
-    "12493": {
-        "total_population": 324,
-        "children_population": 2,
-        "children_0_5_population": 0
-    },
-    "12494": {
-        "total_population": 865,
-        "children_population": 73,
-        "children_0_5_population": 32
-    },
-    "12495": {
-        "total_population": 87,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "12496": {
-        "total_population": 1311,
-        "children_population": 123,
-        "children_0_5_population": 34
-    },
     "12498": {
         "total_population": 4580,
         "children_population": 332,
@@ -3829,60 +2684,10 @@
         "children_population": 256,
         "children_0_5_population": 48
     },
-    "12502": {
-        "total_population": 1147,
-        "children_population": 207,
-        "children_0_5_population": 108
-    },
-    "12503": {
-        "total_population": 787,
-        "children_population": 82,
-        "children_0_5_population": 16
-    },
-    "12504": {
-        "total_population": 1152,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "12507": {
-        "total_population": 238,
-        "children_population": 27,
-        "children_0_5_population": 0
-    },
     "12508": {
         "total_population": 19152,
         "children_population": 2099,
         "children_0_5_population": 690
-    },
-    "12512": {
-        "total_population": 184,
-        "children_population": 12,
-        "children_0_5_population": 12
-    },
-    "12513": {
-        "total_population": 154,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "12514": {
-        "total_population": 2980,
-        "children_population": 261,
-        "children_0_5_population": 115
-    },
-    "12515": {
-        "total_population": 1567,
-        "children_population": 160,
-        "children_0_5_population": 55
-    },
-    "12516": {
-        "total_population": 1859,
-        "children_population": 104,
-        "children_0_5_population": 36
-    },
-    "12517": {
-        "total_population": 384,
-        "children_population": 54,
-        "children_0_5_population": 20
     },
     "12518": {
         "total_population": 5861,
@@ -3904,45 +2709,20 @@
         "children_population": 435,
         "children_0_5_population": 142
     },
-    "12523": {
-        "total_population": 1986,
-        "children_population": 289,
-        "children_0_5_population": 81
-    },
     "12524": {
         "total_population": 15609,
         "children_population": 1797,
         "children_0_5_population": 615
-    },
-    "12525": {
-        "total_population": 1739,
-        "children_population": 165,
-        "children_0_5_population": 29
     },
     "12526": {
         "total_population": 3519,
         "children_population": 221,
         "children_0_5_population": 83
     },
-    "12527": {
-        "total_population": 16,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
     "12528": {
         "total_population": 13358,
         "children_population": 1744,
         "children_0_5_population": 702
-    },
-    "12529": {
-        "total_population": 2296,
-        "children_population": 211,
-        "children_0_5_population": 102
-    },
-    "12530": {
-        "total_population": 283,
-        "children_population": 0,
-        "children_0_5_population": 0
     },
     "12531": {
         "total_population": 2590,
@@ -3974,16 +2754,6 @@
         "children_population": 733,
         "children_0_5_population": 271
     },
-    "12543": {
-        "total_population": 3135,
-        "children_population": 417,
-        "children_0_5_population": 199
-    },
-    "12544": {
-        "total_population": 33,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
     "12545": {
         "total_population": 4521,
         "children_population": 322,
@@ -3998,11 +2768,6 @@
         "total_population": 3277,
         "children_population": 533,
         "children_0_5_population": 167
-    },
-    "12548": {
-        "total_population": 1074,
-        "children_population": 110,
-        "children_0_5_population": 9
     },
     "12549": {
         "total_population": 10635,
@@ -4044,11 +2809,6 @@
         "children_population": 1703,
         "children_0_5_population": 630
     },
-    "12567": {
-        "total_population": 2347,
-        "children_population": 207,
-        "children_0_5_population": 101
-    },
     "12569": {
         "total_population": 9603,
         "children_population": 1338,
@@ -4068,11 +2828,6 @@
         "total_population": 9287,
         "children_population": 838,
         "children_0_5_population": 142
-    },
-    "12574": {
-        "total_population": 293,
-        "children_population": 16,
-        "children_0_5_population": 16
     },
     "12575": {
         "total_population": 1584,
@@ -4129,11 +2884,6 @@
         "children_population": 3649,
         "children_0_5_population": 1286
     },
-    "12592": {
-        "total_population": 1429,
-        "children_population": 232,
-        "children_0_5_population": 74
-    },
     "12594": {
         "total_population": 4117,
         "children_population": 234,
@@ -4149,11 +2899,6 @@
         "children_population": 5309,
         "children_0_5_population": 2177
     },
-    "12604": {
-        "total_population": 1978,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
     "12701": {
         "total_population": 12448,
         "children_population": 1633,
@@ -4164,30 +2909,15 @@
         "children_population": 68,
         "children_0_5_population": 47
     },
-    "12720": {
-        "total_population": 274,
-        "children_population": 35,
-        "children_0_5_population": 0
-    },
     "12721": {
         "total_population": 7872,
         "children_population": 1553,
         "children_0_5_population": 742
     },
-    "12722": {
-        "total_population": 0,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
     "12723": {
         "total_population": 1776,
         "children_population": 108,
         "children_0_5_population": 15
-    },
-    "12724": {
-        "total_population": 78,
-        "children_population": 0,
-        "children_0_5_population": 0
     },
     "12725": {
         "total_population": 323,
@@ -4209,21 +2939,6 @@
         "children_population": 65,
         "children_0_5_population": 19
     },
-    "12733": {
-        "total_population": 1996,
-        "children_population": 165,
-        "children_0_5_population": 31
-    },
-    "12734": {
-        "total_population": 1016,
-        "children_population": 236,
-        "children_0_5_population": 105
-    },
-    "12736": {
-        "total_population": 122,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
     "12737": {
         "total_population": 1625,
         "children_population": 233,
@@ -4239,30 +2954,10 @@
         "children_population": 208,
         "children_0_5_population": 66
     },
-    "12741": {
-        "total_population": 168,
-        "children_population": 8,
-        "children_0_5_population": 0
-    },
     "12742": {
         "total_population": 194,
         "children_population": 0,
         "children_0_5_population": 0
-    },
-    "12743": {
-        "total_population": 310,
-        "children_population": 21,
-        "children_0_5_population": 0
-    },
-    "12745": {
-        "total_population": 5,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "12746": {
-        "total_population": 600,
-        "children_population": 60,
-        "children_0_5_population": 44
     },
     "12747": {
         "total_population": 2026,
@@ -4274,26 +2969,6 @@
         "children_population": 148,
         "children_0_5_population": 10
     },
-    "12749": {
-        "total_population": 539,
-        "children_population": 59,
-        "children_0_5_population": 0
-    },
-    "12750": {
-        "total_population": 36,
-        "children_population": 4,
-        "children_0_5_population": 4
-    },
-    "12751": {
-        "total_population": 1151,
-        "children_population": 394,
-        "children_0_5_population": 247
-    },
-    "12752": {
-        "total_population": 302,
-        "children_population": 11,
-        "children_0_5_population": 6
-    },
     "12754": {
         "total_population": 7800,
         "children_population": 1780,
@@ -4304,60 +2979,15 @@
         "children_population": 582,
         "children_0_5_population": 252
     },
-    "12759": {
-        "total_population": 2145,
-        "children_population": 470,
-        "children_0_5_population": 80
-    },
-    "12760": {
-        "total_population": 425,
-        "children_population": 20,
-        "children_0_5_population": 3
-    },
     "12762": {
         "total_population": 350,
         "children_population": 11,
         "children_0_5_population": 0
     },
-    "12763": {
-        "total_population": 470,
-        "children_population": 14,
-        "children_0_5_population": 6
-    },
     "12764": {
         "total_population": 1713,
         "children_population": 178,
         "children_0_5_population": 42
-    },
-    "12765": {
-        "total_population": 891,
-        "children_population": 86,
-        "children_0_5_population": 19
-    },
-    "12766": {
-        "total_population": 658,
-        "children_population": 78,
-        "children_0_5_population": 0
-    },
-    "12767": {
-        "total_population": 225,
-        "children_population": 37,
-        "children_0_5_population": 37
-    },
-    "12768": {
-        "total_population": 866,
-        "children_population": 40,
-        "children_0_5_population": 27
-    },
-    "12769": {
-        "total_population": 363,
-        "children_population": 26,
-        "children_0_5_population": 26
-    },
-    "12770": {
-        "total_population": 180,
-        "children_population": 25,
-        "children_0_5_population": 0
     },
     "12771": {
         "total_population": 14454,
@@ -4368,61 +2998,6 @@
         "total_population": 2474,
         "children_population": 275,
         "children_0_5_population": 143
-    },
-    "12776": {
-        "total_population": 2072,
-        "children_population": 192,
-        "children_0_5_population": 48
-    },
-    "12777": {
-        "total_population": 846,
-        "children_population": 73,
-        "children_0_5_population": 47
-    },
-    "12778": {
-        "total_population": 402,
-        "children_population": 66,
-        "children_0_5_population": 0
-    },
-    "12779": {
-        "total_population": 2304,
-        "children_population": 464,
-        "children_0_5_population": 219
-    },
-    "12780": {
-        "total_population": 2268,
-        "children_population": 207,
-        "children_0_5_population": 31
-    },
-    "12781": {
-        "total_population": 202,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "12783": {
-        "total_population": 1409,
-        "children_population": 171,
-        "children_0_5_population": 79
-    },
-    "12784": {
-        "total_population": 0,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "12785": {
-        "total_population": 1041,
-        "children_population": 247,
-        "children_0_5_population": 0
-    },
-    "12786": {
-        "total_population": 568,
-        "children_population": 5,
-        "children_0_5_population": 0
-    },
-    "12787": {
-        "total_population": 97,
-        "children_population": 0,
-        "children_0_5_population": 0
     },
     "12788": {
         "total_population": 2841,
@@ -4444,11 +3019,6 @@
         "children_population": 106,
         "children_0_5_population": 13
     },
-    "12792": {
-        "total_population": 167,
-        "children_population": 3,
-        "children_0_5_population": 0
-    },
     "12801": {
         "total_population": 14754,
         "children_population": 2117,
@@ -4464,40 +3034,15 @@
         "children_population": 3253,
         "children_0_5_population": 1230
     },
-    "12808": {
-        "total_population": 201,
-        "children_population": 4,
-        "children_0_5_population": 4
-    },
     "12809": {
         "total_population": 3612,
         "children_population": 510,
         "children_0_5_population": 211
     },
-    "12810": {
-        "total_population": 537,
-        "children_population": 73,
-        "children_0_5_population": 36
-    },
-    "12811": {
-        "total_population": 225,
-        "children_population": 53,
-        "children_0_5_population": 17
-    },
-    "12812": {
-        "total_population": 349,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
     "12814": {
         "total_population": 1135,
         "children_population": 47,
         "children_0_5_population": 17
-    },
-    "12815": {
-        "total_population": 1099,
-        "children_population": 112,
-        "children_0_5_population": 15
     },
     "12816": {
         "total_population": 4626,
@@ -4509,16 +3054,6 @@
         "children_population": 178,
         "children_0_5_population": 41
     },
-    "12819": {
-        "total_population": 286,
-        "children_population": 27,
-        "children_0_5_population": 7
-    },
-    "12820": {
-        "total_population": 102,
-        "children_population": 44,
-        "children_0_5_population": 0
-    },
     "12821": {
         "total_population": 2378,
         "children_population": 31,
@@ -4528,21 +3063,6 @@
         "total_population": 6200,
         "children_population": 880,
         "children_0_5_population": 423
-    },
-    "12823": {
-        "total_population": 502,
-        "children_population": 66,
-        "children_0_5_population": 0
-    },
-    "12824": {
-        "total_population": 1088,
-        "children_population": 99,
-        "children_0_5_population": 62
-    },
-    "12827": {
-        "total_population": 3673,
-        "children_population": 534,
-        "children_0_5_population": 329
     },
     "12828": {
         "total_population": 9590,
@@ -4569,50 +3089,15 @@
         "children_population": 799,
         "children_0_5_population": 281
     },
-    "12835": {
-        "total_population": 2545,
-        "children_population": 172,
-        "children_0_5_population": 64
-    },
-    "12836": {
-        "total_population": 461,
-        "children_population": 12,
-        "children_0_5_population": 2
-    },
-    "12837": {
-        "total_population": 879,
-        "children_population": 120,
-        "children_0_5_population": 13
-    },
-    "12838": {
-        "total_population": 721,
-        "children_population": 99,
-        "children_0_5_population": 37
-    },
     "12839": {
         "total_population": 13764,
         "children_population": 1688,
         "children_0_5_population": 461
     },
-    "12841": {
-        "total_population": 95,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
     "12842": {
         "total_population": 705,
         "children_population": 64,
         "children_0_5_population": 26
-    },
-    "12843": {
-        "total_population": 678,
-        "children_population": 126,
-        "children_0_5_population": 23
-    },
-    "12844": {
-        "total_population": 293,
-        "children_population": 20,
-        "children_0_5_population": 0
     },
     "12845": {
         "total_population": 4573,
@@ -4624,90 +3109,10 @@
         "children_population": 310,
         "children_0_5_population": 71
     },
-    "12847": {
-        "total_population": 687,
-        "children_population": 55,
-        "children_0_5_population": 27
-    },
     "12849": {
         "total_population": 425,
         "children_population": 39,
         "children_0_5_population": 31
-    },
-    "12850": {
-        "total_population": 2729,
-        "children_population": 280,
-        "children_0_5_population": 103
-    },
-    "12851": {
-        "total_population": 319,
-        "children_population": 39,
-        "children_0_5_population": 21
-    },
-    "12852": {
-        "total_population": 365,
-        "children_population": 19,
-        "children_0_5_population": 4
-    },
-    "12853": {
-        "total_population": 1379,
-        "children_population": 235,
-        "children_0_5_population": 49
-    },
-    "12854": {
-        "total_population": 98,
-        "children_population": 49,
-        "children_0_5_population": 31
-    },
-    "12855": {
-        "total_population": 207,
-        "children_population": 21,
-        "children_0_5_population": 8
-    },
-    "12856": {
-        "total_population": 313,
-        "children_population": 12,
-        "children_0_5_population": 0
-    },
-    "12857": {
-        "total_population": 738,
-        "children_population": 40,
-        "children_0_5_population": 16
-    },
-    "12858": {
-        "total_population": 146,
-        "children_population": 2,
-        "children_0_5_population": 0
-    },
-    "12859": {
-        "total_population": 1855,
-        "children_population": 354,
-        "children_0_5_population": 122
-    },
-    "12860": {
-        "total_population": 364,
-        "children_population": 55,
-        "children_0_5_population": 35
-    },
-    "12861": {
-        "total_population": 556,
-        "children_population": 88,
-        "children_0_5_population": 26
-    },
-    "12862": {
-        "total_population": 266,
-        "children_population": 31,
-        "children_0_5_population": 0
-    },
-    "12863": {
-        "total_population": 883,
-        "children_population": 202,
-        "children_0_5_population": 12
-    },
-    "12864": {
-        "total_population": 9,
-        "children_population": 0,
-        "children_0_5_population": 0
     },
     "12865": {
         "total_population": 3448,
@@ -4729,45 +3134,15 @@
         "children_population": 543,
         "children_0_5_population": 184
     },
-    "12872": {
-        "total_population": 103,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "12873": {
-        "total_population": 875,
-        "children_population": 105,
-        "children_0_5_population": 71
-    },
-    "12874": {
-        "total_population": 155,
-        "children_population": 4,
-        "children_0_5_population": 0
-    },
-    "12878": {
-        "total_population": 767,
-        "children_population": 97,
-        "children_0_5_population": 25
-    },
     "12883": {
         "total_population": 4797,
         "children_population": 487,
         "children_0_5_population": 329
     },
-    "12884": {
-        "total_population": 591,
-        "children_population": 114,
-        "children_0_5_population": 48
-    },
     "12885": {
         "total_population": 4411,
         "children_population": 631,
         "children_0_5_population": 142
-    },
-    "12886": {
-        "total_population": 231,
-        "children_population": 14,
-        "children_0_5_population": 0
     },
     "12887": {
         "total_population": 4720,
@@ -4784,16 +3159,6 @@
         "children_population": 229,
         "children_0_5_population": 69
     },
-    "12910": {
-        "total_population": 1886,
-        "children_population": 233,
-        "children_0_5_population": 71
-    },
-    "12911": {
-        "total_population": 0,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
     "12912": {
         "total_population": 1809,
         "children_population": 211,
@@ -4809,20 +3174,10 @@
         "children_population": 112,
         "children_0_5_population": 41
     },
-    "12915": {
-        "total_population": 58,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
     "12916": {
         "total_population": 2375,
         "children_population": 396,
         "children_0_5_population": 114
-    },
-    "12917": {
-        "total_population": 1232,
-        "children_population": 187,
-        "children_0_5_population": 59
     },
     "12918": {
         "total_population": 2607,
@@ -4844,55 +3199,20 @@
         "children_population": 580,
         "children_0_5_population": 298
     },
-    "12922": {
-        "total_population": 37,
-        "children_population": 4,
-        "children_0_5_population": 2
-    },
     "12923": {
         "total_population": 506,
         "children_population": 79,
         "children_0_5_population": 35
-    },
-    "12924": {
-        "total_population": 325,
-        "children_population": 32,
-        "children_0_5_population": 0
     },
     "12926": {
         "total_population": 2325,
         "children_population": 387,
         "children_0_5_population": 200
     },
-    "12927": {
-        "total_population": 295,
-        "children_population": 4,
-        "children_0_5_population": 0
-    },
-    "12928": {
-        "total_population": 1869,
-        "children_population": 248,
-        "children_0_5_population": 95
-    },
-    "12929": {
-        "total_population": 3433,
-        "children_population": 180,
-        "children_0_5_population": 64
-    },
-    "12930": {
-        "total_population": 843,
-        "children_population": 170,
-        "children_0_5_population": 117
-    },
     "12932": {
         "total_population": 1090,
         "children_population": 96,
         "children_0_5_population": 25
-    },
-    "12933": {
-        "total_population": 27,
-        "children_population": 0,
-        "children_0_5_population": 0
     },
     "12934": {
         "total_population": 1197,
@@ -4914,11 +3234,6 @@
         "children_population": 272,
         "children_0_5_population": 76
     },
-    "12939": {
-        "total_population": 141,
-        "children_population": 20,
-        "children_0_5_population": 6
-    },
     "12941": {
         "total_population": 1692,
         "children_population": 152,
@@ -4939,11 +3254,6 @@
         "children_population": 481,
         "children_0_5_population": 133
     },
-    "12945": {
-        "total_population": 528,
-        "children_population": 91,
-        "children_0_5_population": 20
-    },
     "12946": {
         "total_population": 4774,
         "children_population": 619,
@@ -4954,30 +3264,15 @@
         "children_population": 76,
         "children_0_5_population": 27
     },
-    "12952": {
-        "total_population": 265,
-        "children_population": 82,
-        "children_0_5_population": 29
-    },
     "12953": {
         "total_population": 13323,
         "children_population": 1526,
         "children_0_5_population": 725
     },
-    "12955": {
-        "total_population": 345,
-        "children_population": 20,
-        "children_0_5_population": 4
-    },
     "12956": {
         "total_population": 1248,
         "children_population": 114,
         "children_0_5_population": 58
-    },
-    "12957": {
-        "total_population": 1647,
-        "children_population": 297,
-        "children_0_5_population": 57
     },
     "12958": {
         "total_population": 1829,
@@ -4994,90 +3289,25 @@
         "children_population": 103,
         "children_0_5_population": 96
     },
-    "12961": {
-        "total_population": 97,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
     "12962": {
         "total_population": 5051,
         "children_population": 748,
         "children_0_5_population": 261
-    },
-    "12964": {
-        "total_population": 96,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "12965": {
-        "total_population": 272,
-        "children_population": 39,
-        "children_0_5_population": 10
-    },
-    "12966": {
-        "total_population": 3152,
-        "children_population": 683,
-        "children_0_5_population": 295
-    },
-    "12967": {
-        "total_population": 1226,
-        "children_population": 180,
-        "children_0_5_population": 50
-    },
-    "12969": {
-        "total_population": 219,
-        "children_population": 15,
-        "children_0_5_population": 0
-    },
-    "12970": {
-        "total_population": 937,
-        "children_population": 22,
-        "children_0_5_population": 5
     },
     "12972": {
         "total_population": 7049,
         "children_population": 1111,
         "children_0_5_population": 426
     },
-    "12973": {
-        "total_population": 169,
-        "children_population": 29,
-        "children_0_5_population": 5
-    },
     "12974": {
         "total_population": 2054,
         "children_population": 191,
         "children_0_5_population": 133
     },
-    "12975": {
-        "total_population": 210,
-        "children_population": 17,
-        "children_0_5_population": 11
-    },
-    "12976": {
-        "total_population": 175,
-        "children_population": 12,
-        "children_0_5_population": 6
-    },
-    "12977": {
-        "total_population": 1324,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "12978": {
-        "total_population": 256,
-        "children_population": 19,
-        "children_0_5_population": 8
-    },
     "12979": {
         "total_population": 2534,
         "children_population": 399,
         "children_0_5_population": 139
-    },
-    "12980": {
-        "total_population": 1118,
-        "children_population": 55,
-        "children_0_5_population": 8
     },
     "12981": {
         "total_population": 2397,
@@ -5099,16 +3329,6 @@
         "children_population": 561,
         "children_0_5_population": 144
     },
-    "12987": {
-        "total_population": 152,
-        "children_population": 7,
-        "children_0_5_population": 7
-    },
-    "12989": {
-        "total_population": 970,
-        "children_population": 90,
-        "children_0_5_population": 28
-    },
     "12992": {
         "total_population": 3774,
         "children_population": 452,
@@ -5124,45 +3344,15 @@
         "children_population": 183,
         "children_0_5_population": 58
     },
-    "12997": {
-        "total_population": 1217,
-        "children_population": 73,
-        "children_0_5_population": 24
-    },
-    "12998": {
-        "total_population": 294,
-        "children_population": 91,
-        "children_0_5_population": 0
-    },
-    "13020": {
-        "total_population": 107,
-        "children_population": 16,
-        "children_0_5_population": 9
-    },
     "13021": {
         "total_population": 37640,
         "children_population": 4960,
         "children_0_5_population": 2156
     },
-    "13024": {
-        "total_population": 1380,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "13026": {
-        "total_population": 1737,
-        "children_population": 134,
-        "children_0_5_population": 27
-    },
     "13027": {
         "total_population": 35432,
         "children_population": 5495,
         "children_0_5_population": 1913
-    },
-    "13028": {
-        "total_population": 809,
-        "children_population": 119,
-        "children_0_5_population": 38
     },
     "13029": {
         "total_population": 7878,
@@ -5189,11 +3379,6 @@
         "children_population": 585,
         "children_0_5_population": 204
     },
-    "13034": {
-        "total_population": 2022,
-        "children_population": 304,
-        "children_0_5_population": 149
-    },
     "13035": {
         "total_population": 8476,
         "children_population": 814,
@@ -5214,20 +3399,10 @@
         "children_population": 2488,
         "children_0_5_population": 982
     },
-    "13040": {
-        "total_population": 2620,
-        "children_population": 337,
-        "children_0_5_population": 124
-    },
     "13041": {
         "total_population": 11902,
         "children_population": 1881,
         "children_0_5_population": 517
-    },
-    "13042": {
-        "total_population": 2012,
-        "children_population": 207,
-        "children_0_5_population": 62
     },
     "13044": {
         "total_population": 3026,
@@ -5238,11 +3413,6 @@
         "total_population": 28157,
         "children_population": 3191,
         "children_0_5_population": 1262
-    },
-    "13051": {
-        "total_population": 37,
-        "children_population": 0,
-        "children_0_5_population": 0
     },
     "13052": {
         "total_population": 1763,
@@ -5269,25 +3439,10 @@
         "children_population": 402,
         "children_0_5_population": 208
     },
-    "13061": {
-        "total_population": 627,
-        "children_population": 57,
-        "children_0_5_population": 16
-    },
-    "13062": {
-        "total_population": 212,
-        "children_population": 26,
-        "children_0_5_population": 26
-    },
     "13063": {
         "total_population": 1696,
         "children_population": 115,
         "children_0_5_population": 30
-    },
-    "13065": {
-        "total_population": 222,
-        "children_population": 49,
-        "children_0_5_population": 0
     },
     "13066": {
         "total_population": 12752,
@@ -5308,11 +3463,6 @@
         "total_population": 864,
         "children_population": 149,
         "children_0_5_population": 71
-    },
-    "13072": {
-        "total_population": 838,
-        "children_population": 81,
-        "children_0_5_population": 29
     },
     "13073": {
         "total_population": 6514,
@@ -5344,30 +3494,10 @@
         "children_population": 425,
         "children_0_5_population": 201
     },
-    "13081": {
-        "total_population": 1114,
-        "children_population": 150,
-        "children_0_5_population": 50
-    },
-    "13082": {
-        "total_population": 3750,
-        "children_population": 462,
-        "children_0_5_population": 203
-    },
-    "13083": {
-        "total_population": 1989,
-        "children_population": 239,
-        "children_0_5_population": 89
-    },
     "13084": {
         "total_population": 3801,
         "children_population": 451,
         "children_0_5_population": 141
-    },
-    "13087": {
-        "total_population": 161,
-        "children_population": 7,
-        "children_0_5_population": 0
     },
     "13088": {
         "total_population": 21914,
@@ -5389,16 +3519,6 @@
         "children_population": 495,
         "children_0_5_population": 115
     },
-    "13102": {
-        "total_population": 52,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "13103": {
-        "total_population": 226,
-        "children_population": 19,
-        "children_0_5_population": 6
-    },
     "13104": {
         "total_population": 16753,
         "children_population": 2429,
@@ -5409,80 +3529,30 @@
         "children_population": 638,
         "children_0_5_population": 160
     },
-    "13110": {
-        "total_population": 2389,
-        "children_population": 266,
-        "children_0_5_population": 115
-    },
-    "13111": {
-        "total_population": 1790,
-        "children_population": 385,
-        "children_0_5_population": 97
-    },
     "13112": {
         "total_population": 1728,
         "children_population": 334,
         "children_0_5_population": 90
-    },
-    "13113": {
-        "total_population": 52,
-        "children_population": 0,
-        "children_0_5_population": 0
     },
     "13114": {
         "total_population": 7397,
         "children_population": 1019,
         "children_0_5_population": 307
     },
-    "13115": {
-        "total_population": 225,
-        "children_population": 44,
-        "children_0_5_population": 0
-    },
     "13116": {
         "total_population": 3652,
         "children_population": 491,
         "children_0_5_population": 112
-    },
-    "13117": {
-        "total_population": 279,
-        "children_population": 42,
-        "children_0_5_population": 3
     },
     "13118": {
         "total_population": 5811,
         "children_population": 637,
         "children_0_5_population": 182
     },
-    "13119": {
-        "total_population": 0,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
     "13120": {
         "total_population": 2218,
         "children_population": 266,
         "children_0_5_population": 126
-    },
-    "13121": {
-        "total_population": 0,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "13122": {
-        "total_population": 982,
-        "children_population": 80,
-        "children_0_5_population": 30
-    },
-    "13123": {
-        "total_population": 32,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "13124": {
-        "total_population": 102,
-        "children_population": 10,
-        "children_0_5_population": 2
     },
     "13126": {
         "total_population": 36278,
@@ -5499,35 +3569,10 @@
         "children_population": 371,
         "children_0_5_population": 126
     },
-    "13134": {
-        "total_population": 132,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
     "13135": {
         "total_population": 6296,
         "children_population": 1051,
         "children_0_5_population": 523
-    },
-    "13136": {
-        "total_population": 329,
-        "children_population": 77,
-        "children_0_5_population": 24
-    },
-    "13138": {
-        "total_population": 139,
-        "children_population": 11,
-        "children_0_5_population": 0
-    },
-    "13140": {
-        "total_population": 4335,
-        "children_population": 531,
-        "children_0_5_population": 135
-    },
-    "13141": {
-        "total_population": 655,
-        "children_population": 112,
-        "children_0_5_population": 69
     },
     "13142": {
         "total_population": 6044,
@@ -5539,11 +3584,6 @@
         "children_population": 521,
         "children_0_5_population": 209
     },
-    "13144": {
-        "total_population": 1323,
-        "children_population": 239,
-        "children_0_5_population": 98
-    },
     "13145": {
         "total_population": 1595,
         "children_population": 287,
@@ -5553,11 +3593,6 @@
         "total_population": 2176,
         "children_population": 354,
         "children_0_5_population": 135
-    },
-    "13147": {
-        "total_population": 929,
-        "children_population": 111,
-        "children_0_5_population": 58
     },
     "13148": {
         "total_population": 10854,
@@ -5569,35 +3604,10 @@
         "children_population": 995,
         "children_0_5_population": 392
     },
-    "13153": {
-        "total_population": 337,
-        "children_population": 122,
-        "children_0_5_population": 45
-    },
-    "13154": {
-        "total_population": 34,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
     "13155": {
         "total_population": 567,
         "children_population": 69,
         "children_0_5_population": 22
-    },
-    "13156": {
-        "total_population": 2169,
-        "children_population": 217,
-        "children_0_5_population": 91
-    },
-    "13157": {
-        "total_population": 535,
-        "children_population": 62,
-        "children_0_5_population": 24
-    },
-    "13158": {
-        "total_population": 1352,
-        "children_population": 112,
-        "children_0_5_population": 51
     },
     "13159": {
         "total_population": 5243,
@@ -5608,16 +3618,6 @@
         "total_population": 2262,
         "children_population": 357,
         "children_0_5_population": 105
-    },
-    "13162": {
-        "total_population": 409,
-        "children_population": 82,
-        "children_0_5_population": 39
-    },
-    "13163": {
-        "total_population": 332,
-        "children_population": 21,
-        "children_0_5_population": 7
     },
     "13164": {
         "total_population": 2720,
@@ -5714,26 +3714,6 @@
         "children_population": 1435,
         "children_0_5_population": 515
     },
-    "13244": {
-        "total_population": 8384,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "13290": {
-        "total_population": 0,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "13301": {
-        "total_population": 156,
-        "children_population": 28,
-        "children_0_5_population": 8
-    },
-    "13302": {
-        "total_population": 1377,
-        "children_population": 232,
-        "children_0_5_population": 118
-    },
     "13303": {
         "total_population": 1295,
         "children_population": 119,
@@ -5744,40 +3724,10 @@
         "children_population": 316,
         "children_0_5_population": 173
     },
-    "13305": {
-        "total_population": 201,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "13308": {
-        "total_population": 4429,
-        "children_population": 613,
-        "children_0_5_population": 140
-    },
     "13309": {
         "total_population": 5805,
         "children_population": 691,
         "children_0_5_population": 260
-    },
-    "13310": {
-        "total_population": 837,
-        "children_population": 40,
-        "children_0_5_population": 40
-    },
-    "13312": {
-        "total_population": 308,
-        "children_population": 20,
-        "children_0_5_population": 11
-    },
-    "13313": {
-        "total_population": 597,
-        "children_population": 75,
-        "children_0_5_population": 23
-    },
-    "13314": {
-        "total_population": 153,
-        "children_population": 39,
-        "children_0_5_population": 0
     },
     "13315": {
         "total_population": 1404,
@@ -5804,35 +3754,10 @@
         "children_population": 15,
         "children_0_5_population": 0
     },
-    "13320": {
-        "total_population": 2085,
-        "children_population": 261,
-        "children_0_5_population": 131
-    },
-    "13321": {
-        "total_population": 803,
-        "children_population": 111,
-        "children_0_5_population": 0
-    },
-    "13322": {
-        "total_population": 1073,
-        "children_population": 154,
-        "children_0_5_population": 58
-    },
     "13323": {
         "total_population": 11151,
         "children_population": 972,
         "children_0_5_population": 356
-    },
-    "13324": {
-        "total_population": 1653,
-        "children_population": 145,
-        "children_0_5_population": 56
-    },
-    "13325": {
-        "total_population": 929,
-        "children_population": 155,
-        "children_0_5_population": 76
     },
     "13326": {
         "total_population": 4698,
@@ -5844,45 +3769,15 @@
         "children_population": 416,
         "children_0_5_population": 128
     },
-    "13328": {
-        "total_population": 1451,
-        "children_population": 211,
-        "children_0_5_population": 62
-    },
     "13329": {
         "total_population": 3555,
         "children_population": 496,
         "children_0_5_population": 156
     },
-    "13331": {
-        "total_population": 69,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
     "13332": {
         "total_population": 2878,
         "children_population": 769,
         "children_0_5_population": 377
-    },
-    "13333": {
-        "total_population": 57,
-        "children_population": 2,
-        "children_0_5_population": 0
-    },
-    "13334": {
-        "total_population": 943,
-        "children_population": 120,
-        "children_0_5_population": 60
-    },
-    "13335": {
-        "total_population": 1355,
-        "children_population": 230,
-        "children_0_5_population": 127
-    },
-    "13337": {
-        "total_population": 653,
-        "children_population": 39,
-        "children_0_5_population": 3
     },
     "13338": {
         "total_population": 1242,
@@ -5899,20 +3794,10 @@
         "children_population": 1132,
         "children_0_5_population": 388
     },
-    "13342": {
-        "total_population": 275,
-        "children_population": 85,
-        "children_0_5_population": 49
-    },
     "13343": {
         "total_population": 1625,
         "children_population": 204,
         "children_0_5_population": 67
-    },
-    "13345": {
-        "total_population": 175,
-        "children_population": 30,
-        "children_0_5_population": 24
     },
     "13346": {
         "total_population": 6244,
@@ -5929,21 +3814,6 @@
         "children_population": 816,
         "children_0_5_population": 285
     },
-    "13352": {
-        "total_population": 29,
-        "children_population": 15,
-        "children_0_5_population": 0
-    },
-    "13353": {
-        "total_population": 41,
-        "children_population": 7,
-        "children_0_5_population": 2
-    },
-    "13354": {
-        "total_population": 3285,
-        "children_population": 626,
-        "children_0_5_population": 276
-    },
     "13355": {
         "total_population": 1139,
         "children_population": 152,
@@ -5953,26 +3823,6 @@
         "total_population": 10301,
         "children_population": 1624,
         "children_0_5_population": 424
-    },
-    "13360": {
-        "total_population": 128,
-        "children_population": 8,
-        "children_0_5_population": 0
-    },
-    "13361": {
-        "total_population": 661,
-        "children_population": 62,
-        "children_0_5_population": 44
-    },
-    "13363": {
-        "total_population": 2409,
-        "children_population": 413,
-        "children_0_5_population": 180
-    },
-    "13364": {
-        "total_population": 232,
-        "children_population": 2,
-        "children_0_5_population": 0
     },
     "13365": {
         "total_population": 8449,
@@ -5999,16 +3849,6 @@
         "children_population": 867,
         "children_0_5_population": 558
     },
-    "13404": {
-        "total_population": 127,
-        "children_population": 17,
-        "children_0_5_population": 7
-    },
-    "13406": {
-        "total_population": 492,
-        "children_population": 88,
-        "children_0_5_population": 26
-    },
     "13407": {
         "total_population": 5140,
         "children_population": 620,
@@ -6024,11 +3864,6 @@
         "children_population": 172,
         "children_0_5_population": 50
     },
-    "13410": {
-        "total_population": 536,
-        "children_population": 21,
-        "children_0_5_population": 16
-    },
     "13411": {
         "total_population": 2743,
         "children_population": 335,
@@ -6039,11 +3874,6 @@
         "children_population": 1859,
         "children_0_5_population": 508
     },
-    "13415": {
-        "total_population": 82,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
     "13416": {
         "total_population": 2235,
         "children_population": 344,
@@ -6053,11 +3883,6 @@
         "total_population": 3103,
         "children_population": 202,
         "children_0_5_population": 80
-    },
-    "13418": {
-        "total_population": 212,
-        "children_population": 3,
-        "children_0_5_population": 3
     },
     "13420": {
         "total_population": 1092,
@@ -6074,45 +3899,10 @@
         "children_population": 280,
         "children_0_5_population": 132
     },
-    "13425": {
-        "total_population": 1762,
-        "children_population": 211,
-        "children_0_5_population": 96
-    },
-    "13428": {
-        "total_population": 1533,
-        "children_population": 153,
-        "children_0_5_population": 60
-    },
     "13431": {
         "total_population": 1939,
         "children_population": 273,
         "children_0_5_population": 95
-    },
-    "13433": {
-        "total_population": 1647,
-        "children_population": 375,
-        "children_0_5_population": 143
-    },
-    "13435": {
-        "total_population": 275,
-        "children_population": 87,
-        "children_0_5_population": 27
-    },
-    "13436": {
-        "total_population": 107,
-        "children_population": 6,
-        "children_0_5_population": 3
-    },
-    "13437": {
-        "total_population": 307,
-        "children_population": 28,
-        "children_0_5_population": 21
-    },
-    "13438": {
-        "total_population": 2994,
-        "children_population": 368,
-        "children_0_5_population": 139
     },
     "13439": {
         "total_population": 3715,
@@ -6129,35 +3919,15 @@
         "children_population": 0,
         "children_0_5_population": 0
     },
-    "13450": {
-        "total_population": 252,
-        "children_population": 39,
-        "children_0_5_population": 36
-    },
     "13452": {
         "total_population": 4874,
         "children_population": 710,
         "children_0_5_population": 283
     },
-    "13454": {
-        "total_population": 732,
-        "children_population": 72,
-        "children_0_5_population": 36
-    },
-    "13455": {
-        "total_population": 46,
-        "children_population": 10,
-        "children_0_5_population": 2
-    },
     "13456": {
         "total_population": 3977,
         "children_population": 750,
         "children_0_5_population": 255
-    },
-    "13457": {
-        "total_population": 32,
-        "children_population": 1,
-        "children_0_5_population": 0
     },
     "13459": {
         "total_population": 2048,
@@ -6174,55 +3944,15 @@
         "children_population": 434,
         "children_0_5_population": 216
     },
-    "13464": {
-        "total_population": 1245,
-        "children_population": 178,
-        "children_0_5_population": 41
-    },
-    "13468": {
-        "total_population": 291,
-        "children_population": 33,
-        "children_0_5_population": 13
-    },
     "13469": {
         "total_population": 1317,
         "children_population": 119,
         "children_0_5_population": 18
     },
-    "13470": {
-        "total_population": 710,
-        "children_population": 89,
-        "children_0_5_population": 38
-    },
-    "13471": {
-        "total_population": 2656,
-        "children_population": 514,
-        "children_0_5_population": 209
-    },
-    "13472": {
-        "total_population": 340,
-        "children_population": 104,
-        "children_0_5_population": 96
-    },
     "13473": {
         "total_population": 1128,
         "children_population": 225,
         "children_0_5_population": 78
-    },
-    "13475": {
-        "total_population": 39,
-        "children_population": 3,
-        "children_0_5_population": 3
-    },
-    "13476": {
-        "total_population": 2975,
-        "children_population": 408,
-        "children_0_5_population": 189
-    },
-    "13477": {
-        "total_population": 1485,
-        "children_population": 231,
-        "children_0_5_population": 68
     },
     "13478": {
         "total_population": 3040,
@@ -6233,41 +3963,6 @@
         "total_population": 3426,
         "children_population": 472,
         "children_0_5_population": 139
-    },
-    "13482": {
-        "total_population": 63,
-        "children_population": 8,
-        "children_0_5_population": 0
-    },
-    "13483": {
-        "total_population": 454,
-        "children_population": 77,
-        "children_0_5_population": 41
-    },
-    "13484": {
-        "total_population": 29,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "13485": {
-        "total_population": 1635,
-        "children_population": 310,
-        "children_0_5_population": 103
-    },
-    "13486": {
-        "total_population": 738,
-        "children_population": 121,
-        "children_0_5_population": 72
-    },
-    "13488": {
-        "total_population": 141,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "13489": {
-        "total_population": 533,
-        "children_population": 50,
-        "children_0_5_population": 10
     },
     "13490": {
         "total_population": 1181,
@@ -6283,16 +3978,6 @@
         "total_population": 11395,
         "children_population": 1487,
         "children_0_5_population": 501
-    },
-    "13493": {
-        "total_population": 2205,
-        "children_population": 445,
-        "children_0_5_population": 225
-    },
-    "13494": {
-        "total_population": 222,
-        "children_population": 18,
-        "children_0_5_population": 16
     },
     "13495": {
         "total_population": 2081,
@@ -6314,16 +3999,6 @@
         "children_population": 6180,
         "children_0_5_population": 2615
     },
-    "13602": {
-        "total_population": 2798,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "13603": {
-        "total_population": 14050,
-        "children_population": 4975,
-        "children_0_5_population": 2734
-    },
     "13605": {
         "total_population": 5261,
         "children_population": 1011,
@@ -6334,20 +4009,10 @@
         "children_population": 369,
         "children_0_5_population": 120
     },
-    "13607": {
-        "total_population": 1750,
-        "children_population": 120,
-        "children_0_5_population": 41
-    },
     "13608": {
         "total_population": 1818,
         "children_population": 271,
         "children_0_5_population": 117
-    },
-    "13611": {
-        "total_population": 312,
-        "children_population": 94,
-        "children_0_5_population": 29
     },
     "13612": {
         "total_population": 2703,
@@ -6359,16 +4024,6 @@
         "children_population": 335,
         "children_0_5_population": 147
     },
-    "13614": {
-        "total_population": 345,
-        "children_population": 52,
-        "children_0_5_population": 23
-    },
-    "13615": {
-        "total_population": 586,
-        "children_population": 33,
-        "children_0_5_population": 12
-    },
     "13616": {
         "total_population": 1936,
         "children_population": 122,
@@ -6378,11 +4033,6 @@
         "total_population": 12124,
         "children_population": 1138,
         "children_0_5_population": 453
-    },
-    "13618": {
-        "total_population": 1814,
-        "children_population": 271,
-        "children_0_5_population": 99
     },
     "13619": {
         "total_population": 10625,
@@ -6394,20 +4044,10 @@
         "children_population": 455,
         "children_0_5_population": 209
     },
-    "13621": {
-        "total_population": 578,
-        "children_population": 159,
-        "children_0_5_population": 92
-    },
     "13622": {
         "total_population": 1985,
         "children_population": 348,
         "children_0_5_population": 96
-    },
-    "13623": {
-        "total_population": 51,
-        "children_population": 4,
-        "children_0_5_population": 4
     },
     "13624": {
         "total_population": 4933,
@@ -6424,110 +4064,35 @@
         "children_population": 293,
         "children_0_5_population": 127
     },
-    "13628": {
-        "total_population": 268,
-        "children_population": 90,
-        "children_0_5_population": 47
-    },
     "13630": {
         "total_population": 1443,
         "children_population": 144,
         "children_0_5_population": 27
-    },
-    "13632": {
-        "total_population": 107,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "13633": {
-        "total_population": 318,
-        "children_population": 79,
-        "children_0_5_population": 22
     },
     "13634": {
         "total_population": 3947,
         "children_population": 590,
         "children_0_5_population": 157
     },
-    "13635": {
-        "total_population": 1244,
-        "children_population": 220,
-        "children_0_5_population": 81
-    },
-    "13636": {
-        "total_population": 177,
-        "children_population": 47,
-        "children_0_5_population": 17
-    },
     "13637": {
         "total_population": 4493,
         "children_population": 868,
         "children_0_5_population": 469
-    },
-    "13638": {
-        "total_population": 372,
-        "children_population": 62,
-        "children_0_5_population": 0
-    },
-    "13639": {
-        "total_population": 24,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "13640": {
-        "total_population": 302,
-        "children_population": 25,
-        "children_0_5_population": 10
-    },
-    "13641": {
-        "total_population": 54,
-        "children_population": 0,
-        "children_0_5_population": 0
     },
     "13642": {
         "total_population": 9237,
         "children_population": 1128,
         "children_0_5_population": 605
     },
-    "13643": {
-        "total_population": 60,
-        "children_population": 36,
-        "children_0_5_population": 27
-    },
-    "13645": {
-        "total_population": 0,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
     "13646": {
         "total_population": 2257,
         "children_population": 311,
         "children_0_5_population": 100
     },
-    "13647": {
-        "total_population": 150,
-        "children_population": 9,
-        "children_0_5_population": 0
-    },
     "13648": {
         "total_population": 2007,
         "children_population": 226,
         "children_0_5_population": 50
-    },
-    "13649": {
-        "total_population": 37,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "13650": {
-        "total_population": 1355,
-        "children_population": 196,
-        "children_0_5_population": 65
-    },
-    "13651": {
-        "total_population": 126,
-        "children_population": 2,
-        "children_0_5_population": 0
     },
     "13652": {
         "total_population": 1796,
@@ -6554,45 +4119,15 @@
         "children_population": 307,
         "children_0_5_population": 81
     },
-    "13659": {
-        "total_population": 379,
-        "children_population": 41,
-        "children_0_5_population": 19
-    },
     "13660": {
         "total_population": 1849,
         "children_population": 358,
         "children_0_5_population": 147
     },
-    "13661": {
-        "total_population": 1825,
-        "children_population": 251,
-        "children_0_5_population": 94
-    },
     "13662": {
         "total_population": 16117,
         "children_population": 2133,
         "children_0_5_population": 627
-    },
-    "13664": {
-        "total_population": 404,
-        "children_population": 39,
-        "children_0_5_population": 12
-    },
-    "13665": {
-        "total_population": 812,
-        "children_population": 121,
-        "children_0_5_population": 26
-    },
-    "13666": {
-        "total_population": 216,
-        "children_population": 30,
-        "children_0_5_population": 0
-    },
-    "13667": {
-        "total_population": 3171,
-        "children_population": 486,
-        "children_0_5_population": 128
     },
     "13668": {
         "total_population": 3200,
@@ -6604,11 +4139,6 @@
         "children_population": 2537,
         "children_0_5_population": 811
     },
-    "13670": {
-        "total_population": 383,
-        "children_population": 35,
-        "children_0_5_population": 22
-    },
     "13672": {
         "total_population": 376,
         "children_population": 44,
@@ -6619,120 +4149,30 @@
         "children_population": 396,
         "children_0_5_population": 201
     },
-    "13674": {
-        "total_population": 137,
-        "children_population": 38,
-        "children_0_5_population": 4
-    },
-    "13675": {
-        "total_population": 61,
-        "children_population": 7,
-        "children_0_5_population": 0
-    },
     "13676": {
         "total_population": 14179,
         "children_population": 1715,
         "children_0_5_population": 673
-    },
-    "13678": {
-        "total_population": 105,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "13679": {
-        "total_population": 1108,
-        "children_population": 178,
-        "children_0_5_population": 92
-    },
-    "13680": {
-        "total_population": 1398,
-        "children_population": 311,
-        "children_0_5_population": 119
-    },
-    "13681": {
-        "total_population": 971,
-        "children_population": 214,
-        "children_0_5_population": 66
-    },
-    "13682": {
-        "total_population": 845,
-        "children_population": 81,
-        "children_0_5_population": 23
-    },
-    "13683": {
-        "total_population": 66,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "13684": {
-        "total_population": 1172,
-        "children_population": 229,
-        "children_0_5_population": 121
     },
     "13685": {
         "total_population": 2187,
         "children_population": 213,
         "children_0_5_population": 68
     },
-    "13687": {
-        "total_population": 505,
-        "children_population": 64,
-        "children_0_5_population": 44
-    },
-    "13690": {
-        "total_population": 773,
-        "children_population": 139,
-        "children_0_5_population": 64
-    },
     "13691": {
         "total_population": 3123,
         "children_population": 477,
         "children_0_5_population": 206
-    },
-    "13692": {
-        "total_population": 216,
-        "children_population": 14,
-        "children_0_5_population": 0
-    },
-    "13693": {
-        "total_population": 294,
-        "children_population": 6,
-        "children_0_5_population": 6
     },
     "13694": {
         "total_population": 1253,
         "children_population": 180,
         "children_0_5_population": 86
     },
-    "13695": {
-        "total_population": 200,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "13696": {
-        "total_population": 174,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "13697": {
-        "total_population": 1879,
-        "children_population": 218,
-        "children_0_5_population": 59
-    },
-    "13699": {
-        "total_population": 2021,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
     "13730": {
         "total_population": 2871,
         "children_population": 357,
         "children_0_5_population": 122
-    },
-    "13731": {
-        "total_population": 1002,
-        "children_population": 76,
-        "children_0_5_population": 50
     },
     "13732": {
         "total_population": 7607,
@@ -6743,21 +4183,6 @@
         "total_population": 5049,
         "children_population": 533,
         "children_0_5_population": 184
-    },
-    "13734": {
-        "total_population": 2372,
-        "children_population": 302,
-        "children_0_5_population": 127
-    },
-    "13736": {
-        "total_population": 1807,
-        "children_population": 245,
-        "children_0_5_population": 76
-    },
-    "13738": {
-        "total_population": 44,
-        "children_population": 3,
-        "children_0_5_population": 0
     },
     "13739": {
         "total_population": 801,
@@ -6774,25 +4199,10 @@
         "children_population": 316,
         "children_0_5_population": 93
     },
-    "13744": {
-        "total_population": 1359,
-        "children_population": 277,
-        "children_0_5_population": 141
-    },
     "13746": {
         "total_population": 2142,
         "children_population": 226,
         "children_0_5_population": 73
-    },
-    "13747": {
-        "total_population": 29,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "13748": {
-        "total_population": 3760,
-        "children_population": 418,
-        "children_0_5_population": 217
     },
     "13750": {
         "total_population": 711,
@@ -6804,11 +4214,6 @@
         "children_population": 98,
         "children_0_5_population": 58
     },
-    "13752": {
-        "total_population": 868,
-        "children_population": 111,
-        "children_0_5_population": 37
-    },
     "13753": {
         "total_population": 5593,
         "children_population": 494,
@@ -6818,16 +4223,6 @@
         "total_population": 2656,
         "children_population": 290,
         "children_0_5_population": 104
-    },
-    "13755": {
-        "total_population": 888,
-        "children_population": 84,
-        "children_0_5_population": 20
-    },
-    "13756": {
-        "total_population": 694,
-        "children_population": 64,
-        "children_0_5_population": 38
     },
     "13757": {
         "total_population": 1274,
@@ -6839,11 +4234,6 @@
         "children_population": 6027,
         "children_0_5_population": 2340
     },
-    "13774": {
-        "total_population": 148,
-        "children_population": 8,
-        "children_0_5_population": 5
-    },
     "13775": {
         "total_population": 1806,
         "children_population": 149,
@@ -6854,20 +4244,10 @@
         "children_population": 29,
         "children_0_5_population": 0
     },
-    "13777": {
-        "total_population": 396,
-        "children_population": 24,
-        "children_0_5_population": 0
-    },
     "13778": {
         "total_population": 5349,
         "children_population": 857,
         "children_0_5_population": 375
-    },
-    "13780": {
-        "total_population": 862,
-        "children_population": 129,
-        "children_0_5_population": 20
     },
     "13782": {
         "total_population": 730,
@@ -6879,25 +4259,10 @@
         "children_population": 198,
         "children_0_5_population": 18
     },
-    "13784": {
-        "total_population": 294,
-        "children_population": 52,
-        "children_0_5_population": 21
-    },
-    "13786": {
-        "total_population": 366,
-        "children_population": 28,
-        "children_0_5_population": 17
-    },
     "13787": {
         "total_population": 3067,
         "children_population": 461,
         "children_0_5_population": 131
-    },
-    "13788": {
-        "total_population": 959,
-        "children_population": 84,
-        "children_0_5_population": 15
     },
     "13790": {
         "total_population": 18584,
@@ -6914,16 +4279,6 @@
         "children_population": 125,
         "children_0_5_population": 64
     },
-    "13797": {
-        "total_population": 2061,
-        "children_population": 357,
-        "children_0_5_population": 79
-    },
-    "13801": {
-        "total_population": 1496,
-        "children_population": 122,
-        "children_0_5_population": 48
-    },
     "13802": {
         "total_population": 1079,
         "children_population": 136,
@@ -6934,16 +4289,6 @@
         "children_population": 949,
         "children_0_5_population": 376
     },
-    "13804": {
-        "total_population": 190,
-        "children_population": 21,
-        "children_0_5_population": 12
-    },
-    "13806": {
-        "total_population": 222,
-        "children_population": 38,
-        "children_0_5_population": 20
-    },
     "13807": {
         "total_population": 1296,
         "children_population": 149,
@@ -6953,11 +4298,6 @@
         "total_population": 1379,
         "children_population": 182,
         "children_0_5_population": 52
-    },
-    "13809": {
-        "total_population": 1964,
-        "children_population": 283,
-        "children_0_5_population": 185
     },
     "13810": {
         "total_population": 1260,
@@ -6974,16 +4314,6 @@
         "children_population": 274,
         "children_0_5_population": 52
     },
-    "13813": {
-        "total_population": 1131,
-        "children_population": 229,
-        "children_0_5_population": 0
-    },
-    "13814": {
-        "total_population": 18,
-        "children_population": 7,
-        "children_0_5_population": 0
-    },
     "13815": {
         "total_population": 12925,
         "children_population": 1622,
@@ -6999,11 +4329,6 @@
         "children_population": 326,
         "children_0_5_population": 145
     },
-    "13826": {
-        "total_population": 91,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
     "13827": {
         "total_population": 11770,
         "children_population": 1541,
@@ -7013,26 +4338,6 @@
         "total_population": 4933,
         "children_population": 692,
         "children_0_5_population": 145
-    },
-    "13832": {
-        "total_population": 449,
-        "children_population": 64,
-        "children_0_5_population": 29
-    },
-    "13833": {
-        "total_population": 4297,
-        "children_population": 983,
-        "children_0_5_population": 408
-    },
-    "13834": {
-        "total_population": 118,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "13835": {
-        "total_population": 1301,
-        "children_population": 156,
-        "children_0_5_population": 48
     },
     "13838": {
         "total_population": 3984,
@@ -7044,35 +4349,10 @@
         "children_population": 231,
         "children_0_5_population": 67
     },
-    "13841": {
-        "total_population": 483,
-        "children_population": 116,
-        "children_0_5_population": 43
-    },
     "13842": {
         "total_population": 610,
         "children_population": 9,
         "children_0_5_population": 1
-    },
-    "13843": {
-        "total_population": 2094,
-        "children_population": 358,
-        "children_0_5_population": 152
-    },
-    "13844": {
-        "total_population": 638,
-        "children_population": 119,
-        "children_0_5_population": 64
-    },
-    "13846": {
-        "total_population": 369,
-        "children_population": 46,
-        "children_0_5_population": 26
-    },
-    "13847": {
-        "total_population": 17,
-        "children_population": 0,
-        "children_0_5_population": 0
     },
     "13849": {
         "total_population": 4424,
@@ -7088,21 +4368,6 @@
         "total_population": 6063,
         "children_population": 771,
         "children_0_5_population": 298
-    },
-    "13859": {
-        "total_population": 101,
-        "children_population": 20,
-        "children_0_5_population": 0
-    },
-    "13860": {
-        "total_population": 228,
-        "children_population": 32,
-        "children_0_5_population": 7
-    },
-    "13861": {
-        "total_population": 454,
-        "children_population": 29,
-        "children_0_5_population": 0
     },
     "13862": {
         "total_population": 3702,
@@ -7128,11 +4393,6 @@
         "total_population": 19979,
         "children_population": 2966,
         "children_0_5_population": 1233
-    },
-    "13902": {
-        "total_population": 6405,
-        "children_population": 0,
-        "children_0_5_population": 0
     },
     "13903": {
         "total_population": 18483,
@@ -7169,11 +4429,6 @@
         "children_population": 1216,
         "children_0_5_population": 457
     },
-    "14008": {
-        "total_population": 1594,
-        "children_population": 185,
-        "children_0_5_population": 60
-    },
     "14009": {
         "total_population": 5477,
         "children_population": 699,
@@ -7188,11 +4443,6 @@
         "total_population": 3020,
         "children_population": 506,
         "children_0_5_population": 162
-    },
-    "14013": {
-        "total_population": 1744,
-        "children_population": 311,
-        "children_0_5_population": 65
     },
     "14020": {
         "total_population": 22442,
@@ -7209,31 +4459,6 @@
         "children_population": 362,
         "children_0_5_population": 147
     },
-    "14026": {
-        "total_population": 506,
-        "children_population": 65,
-        "children_0_5_population": 65
-    },
-    "14027": {
-        "total_population": 34,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "14028": {
-        "total_population": 1556,
-        "children_population": 162,
-        "children_0_5_population": 45
-    },
-    "14029": {
-        "total_population": 31,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "14030": {
-        "total_population": 2045,
-        "children_population": 421,
-        "children_0_5_population": 219
-    },
     "14031": {
         "total_population": 9685,
         "children_population": 1098,
@@ -7244,45 +4469,15 @@
         "children_population": 1680,
         "children_0_5_population": 538
     },
-    "14033": {
-        "total_population": 1460,
-        "children_population": 207,
-        "children_0_5_population": 98
-    },
-    "14034": {
-        "total_population": 2513,
-        "children_population": 243,
-        "children_0_5_population": 69
-    },
-    "14035": {
-        "total_population": 61,
-        "children_population": 17,
-        "children_0_5_population": 0
-    },
     "14036": {
         "total_population": 5406,
         "children_population": 561,
         "children_0_5_population": 289
     },
-    "14037": {
-        "total_population": 963,
-        "children_population": 81,
-        "children_0_5_population": 12
-    },
-    "14039": {
-        "total_population": 70,
-        "children_population": 11,
-        "children_0_5_population": 4
-    },
     "14040": {
         "total_population": 1799,
         "children_population": 297,
         "children_0_5_population": 136
-    },
-    "14041": {
-        "total_population": 132,
-        "children_population": 14,
-        "children_0_5_population": 0
     },
     "14042": {
         "total_population": 4403,
@@ -7314,21 +4509,6 @@
         "children_population": 1951,
         "children_0_5_population": 607
     },
-    "14054": {
-        "total_population": 1356,
-        "children_population": 275,
-        "children_0_5_population": 65
-    },
-    "14055": {
-        "total_population": 1455,
-        "children_population": 88,
-        "children_0_5_population": 31
-    },
-    "14056": {
-        "total_population": 194,
-        "children_population": 29,
-        "children_0_5_population": 0
-    },
     "14057": {
         "total_population": 7688,
         "children_population": 988,
@@ -7344,30 +4524,10 @@
         "children_population": 1611,
         "children_0_5_population": 699
     },
-    "14060": {
-        "total_population": 356,
-        "children_population": 27,
-        "children_0_5_population": 2
-    },
-    "14061": {
-        "total_population": 93,
-        "children_population": 4,
-        "children_0_5_population": 0
-    },
-    "14062": {
-        "total_population": 3251,
-        "children_population": 468,
-        "children_0_5_population": 181
-    },
     "14063": {
         "total_population": 13123,
         "children_population": 1177,
         "children_0_5_population": 440
-    },
-    "14065": {
-        "total_population": 1747,
-        "children_population": 285,
-        "children_0_5_population": 89
     },
     "14066": {
         "total_population": 1093,
@@ -7383,11 +4543,6 @@
         "total_population": 7990,
         "children_population": 1250,
         "children_0_5_population": 421
-    },
-    "14069": {
-        "total_population": 630,
-        "children_population": 88,
-        "children_0_5_population": 61
     },
     "14070": {
         "total_population": 6186,
@@ -7419,11 +4574,6 @@
         "children_population": 137,
         "children_0_5_population": 17
     },
-    "14083": {
-        "total_population": 10,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
     "14085": {
         "total_population": 8298,
         "children_population": 1405,
@@ -7449,21 +4599,6 @@
         "children_population": 7106,
         "children_0_5_population": 2635
     },
-    "14098": {
-        "total_population": 3146,
-        "children_population": 596,
-        "children_0_5_population": 261
-    },
-    "14101": {
-        "total_population": 1843,
-        "children_population": 237,
-        "children_0_5_population": 77
-    },
-    "14102": {
-        "total_population": 1488,
-        "children_population": 154,
-        "children_0_5_population": 13
-    },
     "14103": {
         "total_population": 10783,
         "children_population": 1580,
@@ -7479,55 +4614,20 @@
         "children_population": 971,
         "children_0_5_population": 456
     },
-    "14109": {
-        "total_population": 1218,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
     "14111": {
         "total_population": 3150,
         "children_population": 408,
         "children_0_5_population": 117
-    },
-    "14112": {
-        "total_population": 54,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "14113": {
-        "total_population": 686,
-        "children_population": 80,
-        "children_0_5_population": 49
     },
     "14120": {
         "total_population": 44414,
         "children_population": 5572,
         "children_0_5_population": 2510
     },
-    "14125": {
-        "total_population": 3580,
-        "children_population": 392,
-        "children_0_5_population": 147
-    },
-    "14126": {
-        "total_population": 456,
-        "children_population": 33,
-        "children_0_5_population": 0
-    },
     "14127": {
         "total_population": 30652,
         "children_population": 4449,
         "children_0_5_population": 1666
-    },
-    "14129": {
-        "total_population": 1300,
-        "children_population": 156,
-        "children_0_5_population": 44
-    },
-    "14130": {
-        "total_population": 112,
-        "children_population": 18,
-        "children_0_5_population": 0
     },
     "14131": {
         "total_population": 5182,
@@ -7539,16 +4639,6 @@
         "children_population": 1022,
         "children_0_5_population": 201
     },
-    "14134": {
-        "total_population": 72,
-        "children_population": 11,
-        "children_0_5_population": 6
-    },
-    "14135": {
-        "total_population": 141,
-        "children_population": 9,
-        "children_0_5_population": 0
-    },
     "14136": {
         "total_population": 5122,
         "children_population": 575,
@@ -7559,20 +4649,10 @@
         "children_population": 275,
         "children_0_5_population": 83
     },
-    "14139": {
-        "total_population": 2074,
-        "children_population": 462,
-        "children_0_5_population": 134
-    },
     "14141": {
         "total_population": 7492,
         "children_population": 1171,
         "children_0_5_population": 397
-    },
-    "14143": {
-        "total_population": 1058,
-        "children_population": 183,
-        "children_0_5_population": 49
     },
     "14145": {
         "total_population": 1206,
@@ -7584,31 +4664,6 @@
         "children_population": 4686,
         "children_0_5_population": 1674
     },
-    "14166": {
-        "total_population": 231,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "14167": {
-        "total_population": 1866,
-        "children_population": 250,
-        "children_0_5_population": 132
-    },
-    "14168": {
-        "total_population": 77,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "14169": {
-        "total_population": 80,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "14170": {
-        "total_population": 2223,
-        "children_population": 364,
-        "children_0_5_population": 80
-    },
     "14171": {
         "total_population": 1605,
         "children_population": 168,
@@ -7618,11 +4673,6 @@
         "total_population": 3091,
         "children_population": 385,
         "children_0_5_population": 126
-    },
-    "14173": {
-        "total_population": 188,
-        "children_population": 14,
-        "children_0_5_population": 0
     },
     "14174": {
         "total_population": 5698,
@@ -7764,25 +4814,10 @@
         "children_population": 3280,
         "children_0_5_population": 1235
     },
-    "14260": {
-        "total_population": 812,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "14261": {
-        "total_population": 4818,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
     "14301": {
         "total_population": 12151,
         "children_population": 1515,
         "children_0_5_population": 665
-    },
-    "14302": {
-        "total_population": 206,
-        "children_population": 0,
-        "children_0_5_population": 0
     },
     "14303": {
         "total_population": 6159,
@@ -7804,40 +4839,20 @@
         "children_population": 1081,
         "children_0_5_population": 272
     },
-    "14413": {
-        "total_population": 174,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
     "14414": {
         "total_population": 6783,
         "children_population": 856,
         "children_0_5_population": 296
-    },
-    "14415": {
-        "total_population": 127,
-        "children_population": 25,
-        "children_0_5_population": 7
     },
     "14416": {
         "total_population": 3800,
         "children_population": 487,
         "children_0_5_population": 220
     },
-    "14418": {
-        "total_population": 1103,
-        "children_population": 218,
-        "children_0_5_population": 96
-    },
     "14420": {
         "total_population": 19945,
         "children_population": 2343,
         "children_0_5_population": 909
-    },
-    "14422": {
-        "total_population": 1763,
-        "children_population": 301,
-        "children_0_5_population": 140
     },
     "14423": {
         "total_population": 4906,
@@ -7853,11 +4868,6 @@
         "total_population": 13201,
         "children_population": 2345,
         "children_0_5_population": 905
-    },
-    "14427": {
-        "total_population": 1721,
-        "children_population": 230,
-        "children_0_5_population": 76
     },
     "14432": {
         "total_population": 5520,
@@ -7914,21 +4924,6 @@
         "children_population": 444,
         "children_0_5_population": 161
     },
-    "14477": {
-        "total_population": 1672,
-        "children_population": 125,
-        "children_0_5_population": 73
-    },
-    "14478": {
-        "total_population": 1369,
-        "children_population": 62,
-        "children_0_5_population": 46
-    },
-    "14479": {
-        "total_population": 98,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
     "14481": {
         "total_population": 1775,
         "children_population": 242,
@@ -7948,11 +4943,6 @@
         "total_population": 4778,
         "children_population": 668,
         "children_0_5_population": 268
-    },
-    "14516": {
-        "total_population": 2505,
-        "children_population": 451,
-        "children_0_5_population": 191
     },
     "14521": {
         "total_population": 3366,
@@ -7979,55 +4969,25 @@
         "children_population": 68,
         "children_0_5_population": 29
     },
-    "14537": {
-        "total_population": 117,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
     "14541": {
         "total_population": 3660,
         "children_population": 546,
         "children_0_5_population": 196
-    },
-    "14542": {
-        "total_population": 0,
-        "children_population": 0,
-        "children_0_5_population": 0
     },
     "14544": {
         "total_population": 2157,
         "children_population": 337,
         "children_0_5_population": 68
     },
-    "14545": {
-        "total_population": 108,
-        "children_population": 18,
-        "children_0_5_population": 9
-    },
     "14546": {
         "total_population": 4920,
         "children_population": 629,
         "children_0_5_population": 362
     },
-    "14556": {
-        "total_population": 1184,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "14557": {
-        "total_population": 121,
-        "children_population": 11,
-        "children_0_5_population": 6
-    },
     "14560": {
         "total_population": 2202,
         "children_population": 238,
         "children_0_5_population": 62
-    },
-    "14561": {
-        "total_population": 2382,
-        "children_population": 241,
-        "children_0_5_population": 56
     },
     "14564": {
         "total_population": 16006,
@@ -8104,80 +5064,20 @@
         "children_population": 1065,
         "children_0_5_population": 362
     },
-    "14707": {
-        "total_population": 93,
-        "children_population": 13,
-        "children_0_5_population": 7
-    },
-    "14708": {
-        "total_population": 155,
-        "children_population": 13,
-        "children_0_5_population": 9
-    },
-    "14709": {
-        "total_population": 1240,
-        "children_population": 152,
-        "children_0_5_population": 56
-    },
-    "14710": {
-        "total_population": 3125,
-        "children_population": 494,
-        "children_0_5_population": 106
-    },
     "14717": {
         "total_population": 564,
         "children_population": 35,
         "children_0_5_population": 16
-    },
-    "14720": {
-        "total_population": 870,
-        "children_population": 85,
-        "children_0_5_population": 34
-    },
-    "14721": {
-        "total_population": 175,
-        "children_population": 13,
-        "children_0_5_population": 0
-    },
-    "14724": {
-        "total_population": 2955,
-        "children_population": 748,
-        "children_0_5_population": 237
-    },
-    "14726": {
-        "total_population": 2743,
-        "children_population": 1015,
-        "children_0_5_population": 433
     },
     "14727": {
         "total_population": 4939,
         "children_population": 715,
         "children_0_5_population": 246
     },
-    "14729": {
-        "total_population": 813,
-        "children_population": 113,
-        "children_0_5_population": 38
-    },
     "14731": {
         "total_population": 1220,
         "children_population": 107,
         "children_0_5_population": 63
-    },
-    "14732": {
-        "total_population": 18,
-        "children_population": 2,
-        "children_0_5_population": 0
-    },
-    "14736": {
-        "total_population": 154,
-        "children_population": 11,
-        "children_0_5_population": 8
-    },
-    "14740": {
-        "total_population": 1112,
-        "children_population": 117,
-        "children_0_5_population": 35
     },
     "14741": {
         "total_population": 1887,
@@ -8203,21 +5103,6 @@
         "total_population": 3993,
         "children_population": 621,
         "children_0_5_population": 256
-    },
-    "14774": {
-        "total_population": 290,
-        "children_population": 67,
-        "children_0_5_population": 4
-    },
-    "14785": {
-        "total_population": 130,
-        "children_population": 0,
-        "children_0_5_population": 0
-    },
-    "14788": {
-        "total_population": 104,
-        "children_population": 0,
-        "children_0_5_population": 0
     },
     "14805": {
         "total_population": 765,

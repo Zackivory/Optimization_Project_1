@@ -12,7 +12,7 @@ if __name__ == '__main__':
         var_values = json.load(f)
 
     # Extract facility_id and visualize on map
-    with open('data/child_care_regulated.csv', 'r', encoding="UTF-8") as csvfile:
+    with open('data/new_child_care.csv', 'r', encoding="UTF-8") as csvfile:
         reader = csv.reader(csvfile)
         child_care_data = {row[0]: row for row in reader}
     zipcode_data_list = []
@@ -53,7 +53,7 @@ if __name__ == '__main__':
     fig.write_html("visuals/choropleth_map_expansion.html")
 
     # Extract location data and visualize on map
-    with open('data/potential_locations.csv', 'r', encoding="UTF-8") as csvfile:
+    with open('data/new_potential_locations.csv', 'r', encoding="UTF-8") as csvfile:
         reader = csv.reader(csvfile)
         potential_locations_data = {index: row for index, row in enumerate(reader, start=1)}
         pprint(potential_locations_data)
