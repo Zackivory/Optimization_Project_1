@@ -76,6 +76,7 @@ $`c_{r_i} =0 \text{ otherwise} `$
 
 
 # objective
+$`C_1= \sum_{z \in Z}d_{z,small}\times 65,000 + d_{z,medium} \times 95,000 + d_{z,large}\times 115,000`$
 
 $`C_2 = \sum_{\text{facility\_id} \in F} \left[ y_{1,\text{facility\_id}} \left( (20000 + 200 \times C_{\text{facility\_id}}) \times x_{\text{facility\_id}} + 100 \times n_{\text{facility\_id}}  \right) \right.`$
 
