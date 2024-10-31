@@ -1,3 +1,4 @@
+import csv
 import json
 import gurobipy as gp
 from gurobipy import GRB
@@ -28,13 +29,13 @@ create_decision_variables_for_expansion_problem2and3(model, decision_variables_e
 
 # Step 3: Define expansion costs using the piecewise expansions
 expansion_cost = {}
-for facility_id, (details, x, y1, y2, y3) in decision_variables_expansion.items():
+for facility_id, (details, x,z, y1, y2, y3) in decision_variables_expansion.items():
     original_capacity = details[2]  # original_total_capacity is at index 2
     original_0_5_capacity = details[1]
     expansion_cost[facility_id] = (
-        y1 * ((20000 + 200 * original_capacity) * x + 100 * x * original_0_5_capacity) +
-        y2 * ((20000 + 400 * original_capacity) * x + 100 * x * original_0_5_capacity) +
-        y3 * ((20000 + 1000 * original_capacity) * x + 100 * x * original_0_5_capacity)
+        y1 * ((20000 + 200 * original_capacity) * x + 100 * z) +
+        y2 * ((20000 + 400 * original_capacity) * x + 100 *z) +
+        y3 * ((20000 + 1000 * original_capacity) * x + 100 *z)
     )
 
 
@@ -46,12 +47,15 @@ for child_care_desert_zipcode, child_care_desert_info in child_care_deserts.item
     sum_of_increase_child_care_capacity = 0
     sum_of_increase_0_5_capacity = 0
 
-    for facility_id, (info_list, var,_,_,_) in decision_variables_expansion.items():
+    for facility_id, (info_list, x,z,_,_,_) in decision_variables_expansion.items():
+
         zipcode, original_0_5_capacity, original_total_capacity, _, _ = info_list
+        print(f"Processing facility_id: {facility_id}, zipcode: {zipcode}")
+        print(f"Original 0-5 capacity: {original_0_5_capacity}, Original total capacity: {original_total_capacity}")
 
         if zipcode == child_care_desert_zipcode:
-            sum_of_increase_child_care_capacity += var * original_total_capacity
-            sum_of_increase_0_5_capacity += var * original_0_5_capacity
+            sum_of_increase_child_care_capacity += x * original_total_capacity
+            sum_of_increase_0_5_capacity += z
 
     for rowNumber_type, (zipcode, var) in decision_variables_new_facilities.items():
         facility_type = rowNumber_type.split('_')[-1]
@@ -85,6 +89,16 @@ from itertools import combinations
 
 # Create a list of locations with their coordinates
 locations = [(row_number, lat_lon['latitude'], lat_lon['longitude']) for row_number, lat_lon in location_that_in_child_care_deserts.items()]
+# Append latitude, longitude from the csv with row number of -1
+with open('data/new_child_care.csv', encoding="utf-8") as csvfile:
+    reader = csv.DictReader(csvfile)
+    for row in reader:
+        try:
+            latitude = float(row['latitude'])
+            longitude = float(row['longitude'])
+            locations.append((-1, latitude, longitude))
+        except ValueError:
+            print(f"Skipping row with invalid data: {row}")
 
 # Sort locations by latitude
 locations.sort(key=lambda x: x[1])
@@ -100,22 +114,24 @@ for pos, (row_number, lat, lon) in enumerate(locations):
 # Iterate through the sorted locations
 for i in range(len(locations)):
     row_number_i, lat_i, lon_i = locations[i]
-    
+
     # Query the R-tree for nearby locations
     nearby = list(idx.intersection((lat_i - 0.06 / 69.0, lon_i - 0.06 / 69.0, lat_i + 0.06 / 69.0, lon_i + 0.06 / 69.0)))
-    
+
     for j in nearby:
         if i >= j:
             continue
-        
+
         row_number_j, lat_j, lon_j = locations[j]
-        
+
         if abs(lon_i - lon_j) < 0.06 / 69.0:
 
             distance = haversine((lat_i, lon_i), (lat_j, lon_j), unit=Unit.MILES)
 
             if distance < 0.06:
                 # Add constraint that at most one facility can be built/expanded if they're too close
+                if row_number_i == -1 or row_number_j == -1 or (row_number_i == -1 and row_number_j == -1):
+                    continue
                 print(f"{i}-{j}")
                 model.addConstr(
                     decision_variables_new_facilities[f"{row_number_i}_small"][1] +
@@ -142,12 +158,16 @@ model.setObjective(
 
 
 if __name__ == '__main__':
-    # Solve the model
     model.optimize()
 
-    # Output the result
     if model.status == GRB.OPTIMAL:
-        print(f'Optimal objective value: {model.objVal}')
+        var_values = {}
+        for var in model.getVars():
+            var_values[var.varName] = var.x
 
+        with open('problem2_results/decision_variable_results.json', 'w') as f:
+            json.dump(var_values, f)
+
+        print(f'Optimal Objective Value: {model.objVal}')
     else:
         print("No optimal solution found")

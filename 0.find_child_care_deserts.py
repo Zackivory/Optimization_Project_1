@@ -22,7 +22,7 @@ least two-thirds of the population of children aged 0-5.
 # Load population data
 population_data = {}
 
-with open('data/population.csv', 'r', encoding="UTF-8") as file:
+with open('data/new_population.csv', 'r', encoding="UTF-8") as file:
     reader = csv.reader(file)
     next(reader)  # Skip header
     for row in reader:
@@ -42,7 +42,7 @@ with open('temp/population_data.json', 'w', encoding="UTF-8") as file:
 # Load employment rate data
 employment_rate_data = {}
 
-with open('data/employment_rate.csv', 'r', encoding="UTF-8") as file:
+with open('data/new_employment.csv', 'r', encoding="UTF-8") as file:
     reader = csv.reader(file)
     next(reader)  # Skip header
     for row in reader:
@@ -53,7 +53,7 @@ with open('data/employment_rate.csv', 'r', encoding="UTF-8") as file:
 # Load average income data
 average_income_data = {}
 
-with open('data/avg_individual_income.csv', 'r', encoding="UTF-8") as file:
+with open('data/new_income.csv', 'r', encoding="UTF-8") as file:
     reader = csv.reader(file)
     next(reader)  # Skip header
     for row in reader:
@@ -65,25 +65,24 @@ with open('data/avg_individual_income.csv', 'r', encoding="UTF-8") as file:
 child_care_capacity_data = {}
 care_0_5_capacity_data = {}
 
-with open('data/child_care_regulated.csv', 'r', encoding="UTF-8") as file:
+with open('data/new_child_care.csv', 'r', encoding="UTF-8") as file:
     reader = csv.reader(file)
     next(reader)  # Skip header
     for row in reader:
-        zipcode = row[5]
+        zipcode = row[0]
         infant_capacity = int(row[7]) if row[7] else 0
         toddler_capacity = int(row[8]) if row[8] else 0
         preschool_capacity = int(row[9]) if row[9] else 0
         school_age_capacity = int(row[10]) if row[10] else 0
         children_capacity = int(row[11]) if row[11] else 0
         total_capacity = int(row[12]) if row[12] else 0
-        # TODO:check the age range for each type
         if zipcode in child_care_capacity_data:
             child_care_capacity_data[zipcode] += total_capacity
         else:
             child_care_capacity_data[zipcode] = total_capacity
 
         # Calculate 0-5 capacity
-        capacity_0_5 = infant_capacity + toddler_capacity
+        capacity_0_5 = infant_capacity + toddler_capacity+preschool_capacity
         if zipcode in care_0_5_capacity_data:
             care_0_5_capacity_data[zipcode] += capacity_0_5
         else:
@@ -129,14 +128,13 @@ for zipcode, data in population_data.items():
 
 
 location_data = {}
-with open('data/potential_locations.csv', 'r') as file:
+with open('data/new_potential_loc.csv', 'r') as file:
     reader = csv.DictReader(file)
     for row_number, row in enumerate(reader, start=1):
-        zipcode = row['zipcode']
-        latitude = float(row['latitude'])
-        longitude = float(row['longitude'])
+        zipcode = row.get('zip_code')
+        latitude = float(row.get('latitude', 0))
+        longitude = float(row.get('longitude', 0))
         location_data[row_number] = {'latitude': latitude, 'longitude': longitude, 'zipcode': zipcode}
-
 
 # Filter locations that are in child care deserts
 location_that_in_child_care_deserts = {
@@ -144,15 +142,10 @@ location_that_in_child_care_deserts = {
     for row_number, lat_lon in location_data.items()
     if lat_lon['zipcode'] in child_care_deserts
 }
+
 # Save the filtered locations to a new JSON file
 with open('temp/location_that_in_child_care_deserts.json', 'w') as f:
     json.dump(location_that_in_child_care_deserts, f, indent=4)
-
-
-if __name__ == '__main__':
-    print()
-
-
 
 
 # Export child_care_deserts into temp
